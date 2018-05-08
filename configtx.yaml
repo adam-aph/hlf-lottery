@@ -1,0 +1,117 @@
+Profiles:
+
+    LOTTERYASSOCIATIONOrdererGenesis:
+        Orderer:
+            <<: *OrdererDefaults
+            Organizations:
+                - *OrdererOrg
+        Consortiums:
+            LOTTERYASSOCIATION:
+                Organizations:
+                    - *Lottery1
+                    - *Lottery2
+                    - *Lottery3
+                    - *Regulator
+
+    Lottery1Channel:
+        Consortium: LOTTERYASSOCIATION
+        Application:
+            <<: *ApplicationDefaults
+            Organizations:
+                - *Lottery1
+                - *Regulator
+
+    Lottery2Channel:
+        Consortium: LOTTERYASSOCIATION
+        Application:
+            <<: *ApplicationDefaults
+            Organizations:
+                - *Lottery2
+                - *Regulator
+
+    Lottery3Channel:
+        Consortium: LOTTERYASSOCIATION
+        Application:
+            <<: *ApplicationDefaults
+            Organizations:
+                - *Lottery3
+                - *Regulator
+
+Organizations:
+
+    - &OrdererOrg
+        Name: OrdererMSP
+        ID: OrdererMSP
+
+        MSPDir: crypto-config/ordererOrganizations/lotteryassociation.com/msp
+
+    - &Lottery1
+        Name: Lottery1MSP
+        ID: Lottery1MSP
+
+        MSPDir: crypto-config/peerOrganizations/lottery1.lotteryassociation.com/msp
+
+        AnchorPeers:
+            - Host: peer0.lottery1.lotteryassociation.com
+              Port: 7051
+
+    - &Lottery2
+        Name: Lottery2MSP
+        ID: Lottery2MSP
+
+        MSPDir: crypto-config/peerOrganizations/lottery2.lotteryassociation.com/msp
+
+        AnchorPeers:
+            - Host: peer0.lottery2.lotteryassociation.com
+              Port: 7051
+
+    - &Lottery3
+        Name: Lottery3MSP
+        ID: Lottery3MSP
+
+        MSPDir: crypto-config/peerOrganizations/lottery3.lotteryassociation.com/msp
+
+        AnchorPeers:
+            - Host: peer0.lottery3.lotteryassociation.com
+              Port: 7051
+
+    - &Regulator
+        Name: RegulatorMSP
+        ID: RegulatorMSP
+
+        MSPDir: crypto-config/peerOrganizations/regulator.lotteryassociation.com/msp
+
+        AnchorPeers:
+            - Host: peer0.regulator.lotteryassociation.com
+              Port: 7051
+
+Orderer: &OrdererDefaults
+    OrdererType: kafka
+
+    Addresses:
+        - orderer0.lotteryassociation.com:7050
+        - orderer1.lotteryassociation.com:7050
+        - orderer2.lotteryassociation.com:7050
+
+    BatchTimeout: 2s
+
+    BatchSize:
+
+        MaxMessageCount: 10
+        AbsoluteMaxBytes: 99 MB
+        PreferredMaxBytes: 512 KB
+
+
+    Kafka:
+        Brokers:
+            - kafka0:9092
+            - kafka1:9092
+            - kafka2:9092
+            - kafka3:9092
+
+    Organizations:
+
+
+Application: &ApplicationDefaults
+    Organizations:
+        
