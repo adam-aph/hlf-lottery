@@ -16,6 +16,7 @@ docker exec cli.Regulator bash -c 'peer channel update -o orderer0.lotteryassoci
 docker exec cli.Regulator bash -c 'peer channel update -o orderer0.lotteryassociation.com:7050 -c lottery2 -f ./channels/regulatoranchororg2.tx'
 docker exec cli.Regulator bash -c 'peer channel update -o orderer0.lotteryassociation.com:7050 -c lottery3 -f ./channels/regulatoranchororg3.tx'
 
+docker exec cli0.Lottery1 bash -c 'peer chaincode install -l java -p LottoWager -n lottowager -v 0'
 
 #docker exec cli0.Org1 bash -c 'peer chaincode install -p artxchg2 -n artxchg2 -v 0'
 #docker exec cli0.Org2 bash -c 'peer chaincode install -p artxchg2 -n artxchg2 -v 0'

@@ -3,7 +3,8 @@ version: '2'
 services:
 
   orderer:
-    image: hyperledger/fabric-orderer:x86_64-1.0.0
+    #image: hyperledger/fabric-orderer:x86_64-1.0.0
+    image: hyperledger/fabric-orderer:x86_64-1.1.0-preview
     environment:
       - ORDERER_GENERAL_LISTENADDRESS=0.0.0.0
       - ORDERER_GENERAL_GENESISMETHOD=file

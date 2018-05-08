@@ -1,2 +1,4 @@
-# hlf-lottery
-Hyperledger Fabric Lottery Project
+## hlf-lottery
+
+### Hyperledger Fabric Lottery Project
+
