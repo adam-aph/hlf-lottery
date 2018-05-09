@@ -9,8 +9,8 @@ services:
       - CORE_VM_DOCKER_HOSTCONFIG_NETWORKMODE=hlflottery_lotteryassociation
       - CORE_PEER_ADDRESSAUTODETECT=true
     working_dir: /opt/gopath/src/github.com/hyperledger/fabric/peer/
-    #command: peer node start
-    command: peer node start --peer-chaincodedev=true
+    command: peer node start
+    #command: peer node start --peer-chaincodedev=true
     volumes:
     - /var/run/:/host/var/run/
     

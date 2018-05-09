@@ -1,3 +1,3 @@
-2018/05/08 10:18:49 [INFO] User provided config file: crypto-config/peerOrganizations/regulator.lotteryassociation.com/fabric-ca-client-config.yaml
-2018/05/08 10:18:49 [INFO] Configuration file location: /home/adam/hlf/hlf-lottery/crypto-config/peerOrganizations/regulator.lotteryassociation.com/fabric-ca-client-config.yaml
-2018/05/08 10:18:49 [INFO] Stored CA root certificate at /home/adam/hlf/hlf-lottery/crypto-config/peerOrganizations/regulator.lotteryassociation.com/msp/cacerts/localhost-7108.pem
+2018/05/09 10:16:06 [INFO] User provided config file: crypto-config/peerOrganizations/regulator.lotteryassociation.com/fabric-ca-client-config.yaml
+2018/05/09 10:16:06 [INFO] Configuration file location: /home/adam/hlf/hlf-lottery/crypto-config/peerOrganizations/regulator.lotteryassociation.com/fabric-ca-client-config.yaml
+2018/05/09 10:16:06 [INFO] Stored CA root certificate at /home/adam/hlf/hlf-lottery/crypto-config/peerOrganizations/regulator.lotteryassociation.com/msp/cacerts/localhost-7108.pem

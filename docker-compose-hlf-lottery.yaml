@@ -175,9 +175,10 @@ services:
     networks:
       - lotteryassociation
 
-  cdb.Lottery1:
-    container_name: cdbLottery1
-    image: hyperledger/fabric-couchdb:x86_64-1.0.0
+  cdb.Lottery1a:
+    container_name: cdbLottery1a
+    #image: hyperledger/fabric-couchdb:x86_64-1.0.0
+    image: hyperledger/fabric-couchdb:x86_64-1.1.0-preview
     environment:
       DB_URL: http://localhost:5984/
     ports:
@@ -185,9 +186,10 @@ services:
     networks:
       - lotteryassociation
 
-  cdb.Lottery2:
-    container_name: cdbLottery2
-    image: hyperledger/fabric-couchdb:x86_64-1.0.0
+  cdb.Lottery1b:
+    container_name: cdbLottery1b
+    #image: hyperledger/fabric-couchdb:x86_64-1.0.0
+    image: hyperledger/fabric-couchdb:x86_64-1.1.0-preview
     environment:
       DB_URL: http://localhost:5984/
     ports:
@@ -195,9 +197,10 @@ services:
     networks:
       - lotteryassociation
 
-  cdb.Lottery3:
-    container_name: cdbLottery3
-    image: hyperledger/fabric-couchdb:x86_64-1.0.0
+  cdb.Lottery2:
+    container_name: cdbLottery2
+    #image: hyperledger/fabric-couchdb:x86_64-1.0.0
+    image: hyperledger/fabric-couchdb:x86_64-1.1.0-preview
     environment:
       DB_URL: http://localhost:5984/
     ports:
@@ -205,13 +208,25 @@ services:
     networks:
       - lotteryassociation
 
-  cdb.Regulator:
-    container_name: cdbRegulator
-    image: hyperledger/fabric-couchdb:x86_64-1.0.0
+  cdb.Lottery3:
+    container_name: cdbLottery3
+    #image: hyperledger/fabric-couchdb:x86_64-1.0.0
+    image: hyperledger/fabric-couchdb:x86_64-1.1.0-preview
     environment:
       DB_URL: http://localhost:5984/
     ports:
       - "5987:5984"
+    networks:
+      - lotteryassociation
+
+  cdb.Regulator:
+    container_name: cdbRegulator
+    #image: hyperledger/fabric-couchdb:x86_64-1.0.0
+    image: hyperledger/fabric-couchdb:x86_64-1.1.0-preview
+    environment:
+      DB_URL: http://localhost:5984/
+    ports:
+      - "5988:5984"
     networks:
       - lotteryassociation
 
@@ -227,17 +242,45 @@ services:
       - CORE_PEER_MSPCONFIGPATH=/etc/hyperledger/msp/peer/
       - CORE_PEER_GOSSIP_EXTERNALENDPOINT=peer0.lottery1.lotteryassociation.com:7051
       - CORE_LEDGER_STATE_STATEDATABASE=CouchDB
-      - CORE_LEDGER_STATE_COUCHDBCONFIG_COUCHDBADDRESS=cdbLottery1:5984
+      - CORE_LEDGER_STATE_COUCHDBCONFIG_COUCHDBADDRESS=cdbLottery1a:5984
     volumes:
       - ./crypto-config/peerOrganizations/lottery1.lotteryassociation.com/peers/peer0.lottery1.lotteryassociation.com/msp:/etc/hyperledger/msp/peer
     ports:
       - 13051:7051
+      - 13052:7052
       - 13053:7053
     depends_on:
       - orderer0.lotteryassociation.com
       - orderer1.lotteryassociation.com
       - orderer2.lotteryassociation.com
-      - cdb.Lottery1
+      - cdb.Lottery1a
+    networks:
+      - lotteryassociation
+
+  peer1.lottery1.lotteryassociation.com:
+    container_name: peer1.lottery1.lotteryassociation.com
+    extends:
+      file: ./peer.yaml
+      service: peer
+    environment:
+      - CORE_PEER_ID=peer1.lottery1.lotteryassociation.com
+      - CORE_PEER_ADDRESS=peer1.lottery1.lotteryassociation.com:7051
+      - CORE_PEER_LOCALMSPID=Lottery1MSP
+      - CORE_PEER_MSPCONFIGPATH=/etc/hyperledger/msp/peer/
+      - CORE_PEER_GOSSIP_EXTERNALENDPOINT=peer1.lottery1.lotteryassociation.com:7051
+      - CORE_LEDGER_STATE_STATEDATABASE=CouchDB
+      - CORE_LEDGER_STATE_COUCHDBCONFIG_COUCHDBADDRESS=cdbLottery1b:5984
+    volumes:
+      - ./crypto-config/peerOrganizations/lottery1.lotteryassociation.com/peers/peer1.lottery1.lotteryassociation.com/msp:/etc/hyperledger/msp/peer
+    ports:
+      - 14051:7051
+      - 14052:7052
+      - 14053:7053
+    depends_on:
+      - orderer0.lotteryassociation.com
+      - orderer1.lotteryassociation.com
+      - orderer2.lotteryassociation.com
+      - cdb.Lottery1b
     networks:
       - lotteryassociation
 
@@ -258,6 +301,7 @@ services:
       - ./crypto-config/peerOrganizations/lottery2.lotteryassociation.com/peers/peer0.lottery2.lotteryassociation.com/msp:/etc/hyperledger/msp/peer
     ports:
       - 15051:7051
+      - 15052:7052
       - 15053:7053
     depends_on:
       - orderer0.lotteryassociation.com
@@ -284,6 +328,7 @@ services:
       - ./crypto-config/peerOrganizations/lottery3.lotteryassociation.com/peers/peer0.lottery3.lotteryassociation.com/msp:/etc/hyperledger/msp/peer
     ports:
       - 17051:7051
+      - 17052:7052
       - 17053:7053
     depends_on:
       - orderer0.lotteryassociation.com
@@ -310,6 +355,7 @@ services:
       - ./crypto-config/peerOrganizations/regulator.lotteryassociation.com/peers/peer0.regulator.lotteryassociation.com/msp:/etc/hyperledger/msp/peer
     ports:
       - 18051:7051
+      - 18052:7052
       - 18053:7053
     depends_on:
       - orderer0.lotteryassociation.com
@@ -333,6 +379,23 @@ services:
       - ./crypto-config/peerOrganizations/lottery1.lotteryassociation.com:/etc/hyperledger/msp
     depends_on:
       - peer0.lottery1.lotteryassociation.com
+    networks:
+      - lotteryassociation
+
+  cli1.Lottery1:
+    extends:
+      file: ./cli.yaml
+      service: cli
+    container_name: cli1.Lottery1
+    environment:
+      - CORE_PEER_ID=cli1.lottery1.lotteryassociation.com
+      - CORE_PEER_ADDRESS=peer1.lottery1.lotteryassociation.com:7051
+      - CORE_PEER_LOCALMSPID=Lottery1MSP
+      - CORE_PEER_MSPCONFIGPATH=/etc/hyperledger/msp/users/Admin@lottery1.lotteryassociation.com/msp
+    volumes:
+      - ./crypto-config/peerOrganizations/lottery1.lotteryassociation.com:/etc/hyperledger/msp
+    depends_on:
+      - peer1.lottery1.lotteryassociation.com
     networks:
       - lotteryassociation
 

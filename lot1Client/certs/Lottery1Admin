@@ -1,0 +1,13 @@
+{
+   "name": "Lottery1Admin",
+   "mspid": "Lottery1MSP",
+   "roles": null,
+   "affiliation": "",
+   "enrollmentSecret": "",
+   "enrollment": {
+      "signingIdentity": "aa3aa90f12c21aa41bc618e47566247a114b4c3a50bbfcd0cdd71826043032e8",
+      "identity": {
+         "certificate": "-----BEGIN CERTIFICATE-----\nMIICRzCCAe2gAwIBAgIUGP7/vYMsIlfYpcBoklZcQQtd1aswCgYIKoZIzj0EAwIw\naDELMAkGA1UEBhMCVVMxFzAVBgNVBAgTDk5vcnRoIENhcm9saW5hMRQwEgYDVQQK\nEwtIeXBlcmxlZGdlcjEPMA0GA1UECxMGRmFicmljMRkwFwYDVQQDExBmYWJyaWMt\nY2Etc2VydmVyMB4XDTE4MDUwOTA4MTEwMFoXDTE5MDUwOTA4MTEwMFowYTELMAkG\nA1UEBhMCVVMxFzAVBgNVBAgTDk5vcnRoIENhcm9saW5hMRQwEgYDVQQKEwtIeXBl\ncmxlZGdlcjEPMA0GA1UECxMGRmFicmljMRIwEAYDVQQDEwlub2RlQWRtaW4wWTAT\nBgcqhkjOPQIBBggqhkjOPQMBBwNCAATWBr9jutY2NajPNFinMl/+RrQi20k4lo0o\nQ4/ocAn1RI1Ldi1P9qaxUqc/SVwTNkPYS711lTOWd+hTL8MPtryCo3wwejAOBgNV\nHQ8BAf8EBAMCB4AwDAYDVR0TAQH/BAIwADAdBgNVHQ4EFgQUKEC7SA/7mGex1BMk\n/Z5klGmnbYAwHwYDVR0jBBgwFoAUJFlLNNS5Y5RMnf0OmCWCUBV9P0kwGgYDVR0R\nBBMwEYIPYWRhbS1WaXJ0dWFsQm94MAoGCCqGSM49BAMCA0gAMEUCIQCxHowj+CU7\nuYKGdjy3wkP+gyEgGvf/4qY8B0RqSgamLgIgNl4nxRzO4a+qtE36F6NsAHu3IP6x\nqbUaXjQ/K1KNjgA=\n-----END CERTIFICATE-----\n"
+      }
+   }
+}

@@ -54,6 +54,8 @@ Organizations:
         AnchorPeers:
             - Host: peer0.lottery1.lotteryassociation.com
               Port: 7051
+            - Host: peer1.lottery1.lotteryassociation.com
+              Port: 7051              
 
     - &Lottery2
         Name: Lottery2MSP

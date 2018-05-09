@@ -1,482 +1,482 @@
-2018/05/08 10:18:28 [INFO] Created default configuration file at /home/adam/hlf/hlf-lottery/crypto-config/ordererOrganizations/lotteryassociation.com/ca/root/fabric-ca-server-config.yaml
-2018/05/08 10:18:29 [INFO] Starting server in home directory: /home/adam/hlf/hlf-lottery/crypto-config/ordererOrganizations/lotteryassociation.com/ca/root
-2018/05/08 10:18:29 [DEBUG] CA Home Directory: /home/adam/hlf/hlf-lottery/crypto-config/ordererOrganizations/lotteryassociation.com/ca/root
-2018/05/08 10:18:29 [DEBUG] Making server filenames absolute
-2018/05/08 10:18:29 [DEBUG] Initializing default CA in directory /home/adam/hlf/hlf-lottery/crypto-config/ordererOrganizations/lotteryassociation.com/ca/root
-2018/05/08 10:18:29 [DEBUG] Init CA with home /home/adam/hlf/hlf-lottery/crypto-config/ordererOrganizations/lotteryassociation.com/ca/root and config {CA:{Name: Keyfile:ca-key.pem Certfile:ca-cert.pem Chainfile:ca-chain.pem} Signing:0xc420280620 CSR:{CN:fabric-ca-server Names:[{C:US ST:North Carolina L: O:Hyperledger OU:Fabric SerialNumber:}] Hosts:[adam-VirtualBox localhost] KeyRequest:<nil> CA:0xc4202781a0 SerialNumber:} Registry:{MaxEnrollments:-1 Identities:[{ Name:**** Pass:**** Type:client Affiliation: MaxEnrollments:0 Attrs:map[hf.IntermediateCA:1 hf.Registrar.Roles:client,user,peer,validator,auditor hf.Registrar.DelegateRoles:client,user,validator,auditor hf.Revoker:1]  }]} Affiliations:map[org1:[department1 department2] org2:[department1]] LDAP:{ Enabled:false URL:ldap://****:****@<host>:<port>/<base> UserFilter:(uid=%s) GroupFilter:(memberUid=%s) TLS:{false [ldap-server-cert.pem] {ldap-client-key.pem ldap-client-cert.pem}}  } DB:{ Type:sqlite3 Datasource:fabric-ca-server.db TLS:{false [db-server-cert.pem] {db-client-key.pem db-client-cert.pem}}  } CSP:0xc420259d20 Client:<nil> Intermediate:{ParentServer:{URL: CAName:} TLS:{Enabled:false CertFiles:[] Client:{KeyFile: CertFile:}} Enrollment:{Name: Secret: Profile: Label: CSR:<nil> CAName:}}}
-2018/05/08 10:18:29 [DEBUG] CA Home Directory: /home/adam/hlf/hlf-lottery/crypto-config/ordererOrganizations/lotteryassociation.com/ca/root
-2018/05/08 10:18:29 [DEBUG] Initializing BCCSP: &{ProviderName:SW SwOpts:0xc4202743f0 Pkcs11Opts:<nil>}
-2018/05/08 10:18:29 [DEBUG] Initializing BCCSP with software options &{SecLevel:256 HashFamily:SHA2 Ephemeral:false FileKeystore:0xc420272e30 DummyKeystore:<nil>}
-2018/05/08 10:18:29 [DEBUG] Initialize key material
-2018/05/08 10:18:29 [DEBUG] Making CA filenames absolute
-2018/05/08 10:18:29 [DEBUG] Getting CA cert; parent server URL is ''
-2018/05/08 10:18:29 [DEBUG] Root CA certificate request: {CN:fabric-ca-server Names:[{C:US ST:North Carolina L: O:Hyperledger OU:Fabric SerialNumber:}] Hosts:[adam-VirtualBox localhost] KeyRequest:0xc420279e20 CA:0xc4202781a0 SerialNumber:}
-2018/05/08 10:18:29 [INFO] generating key: &{A:ecdsa S:256}
-2018/05/08 10:18:29 [DEBUG] generate key from request: algo=ecdsa, size=256
-2018/05/08 10:18:29 [INFO] encoded CSR
-2018/05/08 10:18:29 [DEBUG] validating configuration
-2018/05/08 10:18:29 [DEBUG] validate local profile
-2018/05/08 10:18:29 [DEBUG] profile is valid
-2018/05/08 10:18:29 [INFO] signed certificate with serial number 93701465380067955188785818467533182359416224791
-2018/05/08 10:18:29 [INFO] The CA key and certificate were generated for CA 
-2018/05/08 10:18:29 [INFO] The key was stored by BCCSP provider 'SW'
-2018/05/08 10:18:29 [INFO] The certificate is at: /home/adam/hlf/hlf-lottery/crypto-config/ordererOrganizations/lotteryassociation.com/ca/root/ca-cert.pem
-2018/05/08 10:18:29 [DEBUG] Initializing DB
-2018/05/08 10:18:29 [DEBUG] Using sqlite database, connect to database in home (/home/adam/hlf/hlf-lottery/crypto-config/ordererOrganizations/lotteryassociation.com/ca/root/fabric-ca-server.db) directory
-2018/05/08 10:18:29 [DEBUG] Creating SQLite database (/home/adam/hlf/hlf-lottery/crypto-config/ordererOrganizations/lotteryassociation.com/ca/root/fabric-ca-server.db) if it does not exist...
-2018/05/08 10:18:29 [DEBUG] Creating users table if it does not exist
-2018/05/08 10:18:29 [DEBUG] Creating affiliations table if it does not exist
-2018/05/08 10:18:29 [DEBUG] Creating certificates table if it does not exist
-2018/05/08 10:18:29 [DEBUG] Successfully opened sqlite3 DB
-2018/05/08 10:18:29 [DEBUG] Initializing identity registry
-2018/05/08 10:18:29 [DEBUG] Loading identity table
-2018/05/08 10:18:29 [DEBUG] Loading identity 'admin'
-2018/05/08 10:18:29 [DEBUG] DB: Getting identity admin
-2018/05/08 10:18:29 [DEBUG] Max enrollment value verification - User specified max enrollment: 0, CA max enrollment: -1
-2018/05/08 10:18:29 [DEBUG] DB: Add identity admin
-2018/05/08 10:18:29 [DEBUG] Successfully added identity admin to the database
-2018/05/08 10:18:29 [DEBUG] Registered identity: { Name:**** Pass:**** Type:client Affiliation: MaxEnrollments:-1 Attrs:map[hf.Registrar.Roles:client,user,peer,validator,auditor hf.Registrar.DelegateRoles:client,user,validator,auditor hf.Revoker:1 hf.IntermediateCA:1]  }
-2018/05/08 10:18:29 [DEBUG] Successfully loaded identity table
-2018/05/08 10:18:29 [DEBUG] Initialized DB identity registry
-2018/05/08 10:18:29 [DEBUG] Loading affiliations table
-2018/05/08 10:18:29 [DEBUG] DB: Add affiliation org2
-2018/05/08 10:18:29 [DEBUG] Affiliation 'org2' added
-2018/05/08 10:18:29 [DEBUG] DB: Add affiliation org2.department1
-2018/05/08 10:18:29 [DEBUG] Affiliation 'org2.department1' added
-2018/05/08 10:18:29 [DEBUG] DB: Add affiliation org1
-2018/05/08 10:18:29 [DEBUG] Affiliation 'org1' added
-2018/05/08 10:18:29 [DEBUG] DB: Add affiliation org1.department1
-2018/05/08 10:18:29 [DEBUG] Affiliation 'org1.department1' added
-2018/05/08 10:18:29 [DEBUG] DB: Add affiliation org1.department2
-2018/05/08 10:18:29 [DEBUG] Affiliation 'org1.department2' added
-2018/05/08 10:18:29 [DEBUG] Successfully loaded affiliations table
-2018/05/08 10:18:29 [INFO] Initialized sqlite3 database at /home/adam/hlf/hlf-lottery/crypto-config/ordererOrganizations/lotteryassociation.com/ca/root/fabric-ca-server.db
-2018/05/08 10:18:29 [DEBUG] Initializing enrollment signer
-2018/05/08 10:18:29 [DEBUG] validating configuration
-2018/05/08 10:18:29 [DEBUG] validate local profile
-2018/05/08 10:18:29 [DEBUG] profile is valid
-2018/05/08 10:18:29 [DEBUG] validate local profile
-2018/05/08 10:18:29 [DEBUG] profile is valid
-2018/05/08 10:18:29 [DEBUG] CA initialization successful
-2018/05/08 10:18:29 [INFO] Home directory for default CA: /home/adam/hlf/hlf-lottery/crypto-config/ordererOrganizations/lotteryassociation.com/ca/root
-2018/05/08 10:18:29 [DEBUG] 1 CA instance(s) running on server
-2018/05/08 10:18:29 [INFO] Listening on http://0.0.0.0:7100
-2018/05/08 10:18:30 [DEBUG] Received request
+2018/05/09 10:15:42 [INFO] Created default configuration file at /home/adam/hlf/hlf-lottery/crypto-config/ordererOrganizations/lotteryassociation.com/ca/root/fabric-ca-server-config.yaml
+2018/05/09 10:15:42 [INFO] Starting server in home directory: /home/adam/hlf/hlf-lottery/crypto-config/ordererOrganizations/lotteryassociation.com/ca/root
+2018/05/09 10:15:42 [DEBUG] CA Home Directory: /home/adam/hlf/hlf-lottery/crypto-config/ordererOrganizations/lotteryassociation.com/ca/root
+2018/05/09 10:15:42 [DEBUG] Making server filenames absolute
+2018/05/09 10:15:42 [DEBUG] Initializing default CA in directory /home/adam/hlf/hlf-lottery/crypto-config/ordererOrganizations/lotteryassociation.com/ca/root
+2018/05/09 10:15:42 [DEBUG] Init CA with home /home/adam/hlf/hlf-lottery/crypto-config/ordererOrganizations/lotteryassociation.com/ca/root and config {CA:{Name: Keyfile:ca-key.pem Certfile:ca-cert.pem Chainfile:ca-chain.pem} Signing:0xc42026b250 CSR:{CN:fabric-ca-server Names:[{C:US ST:North Carolina L: O:Hyperledger OU:Fabric SerialNumber:}] Hosts:[adam-VirtualBox localhost] KeyRequest:<nil> CA:0xc4202729e0 SerialNumber:} Registry:{MaxEnrollments:-1 Identities:[{ Name:**** Pass:**** Type:client Affiliation: MaxEnrollments:0 Attrs:map[hf.Revoker:1 hf.IntermediateCA:1 hf.Registrar.Roles:client,user,peer,validator,auditor hf.Registrar.DelegateRoles:client,user,validator,auditor]  }]} Affiliations:map[org1:[department1 department2] org2:[department1]] LDAP:{ Enabled:false URL:ldap://****:****@<host>:<port>/<base> UserFilter:(uid=%s) GroupFilter:(memberUid=%s) TLS:{false [ldap-server-cert.pem] {ldap-client-key.pem ldap-client-cert.pem}}  } DB:{ Type:sqlite3 Datasource:fabric-ca-server.db TLS:{false [db-server-cert.pem] {db-client-key.pem db-client-cert.pem}}  } CSP:0xc420273200 Client:<nil> Intermediate:{ParentServer:{URL: CAName:} TLS:{Enabled:false CertFiles:[] Client:{KeyFile: CertFile:}} Enrollment:{Name: Secret: Profile: Label: CSR:<nil> CAName:}}}
+2018/05/09 10:15:42 [DEBUG] CA Home Directory: /home/adam/hlf/hlf-lottery/crypto-config/ordererOrganizations/lotteryassociation.com/ca/root
+2018/05/09 10:15:42 [DEBUG] Initializing BCCSP: &{ProviderName:SW SwOpts:0xc42026c7b0 Pkcs11Opts:<nil>}
+2018/05/09 10:15:42 [DEBUG] Initializing BCCSP with software options &{SecLevel:256 HashFamily:SHA2 Ephemeral:false FileKeystore:0xc42027b250 DummyKeystore:<nil>}
+2018/05/09 10:15:42 [DEBUG] Initialize key material
+2018/05/09 10:15:42 [DEBUG] Making CA filenames absolute
+2018/05/09 10:15:42 [DEBUG] Getting CA cert; parent server URL is ''
+2018/05/09 10:15:42 [DEBUG] Root CA certificate request: {CN:fabric-ca-server Names:[{C:US ST:North Carolina L: O:Hyperledger OU:Fabric SerialNumber:}] Hosts:[adam-VirtualBox localhost] KeyRequest:0xc420273e00 CA:0xc4202729e0 SerialNumber:}
+2018/05/09 10:15:42 [INFO] generating key: &{A:ecdsa S:256}
+2018/05/09 10:15:42 [DEBUG] generate key from request: algo=ecdsa, size=256
+2018/05/09 10:15:42 [INFO] encoded CSR
+2018/05/09 10:15:42 [DEBUG] validating configuration
+2018/05/09 10:15:42 [DEBUG] validate local profile
+2018/05/09 10:15:42 [DEBUG] profile is valid
+2018/05/09 10:15:42 [INFO] signed certificate with serial number 405362562965529005176905488433777353418946845130
+2018/05/09 10:15:42 [INFO] The CA key and certificate were generated for CA 
+2018/05/09 10:15:42 [INFO] The key was stored by BCCSP provider 'SW'
+2018/05/09 10:15:42 [INFO] The certificate is at: /home/adam/hlf/hlf-lottery/crypto-config/ordererOrganizations/lotteryassociation.com/ca/root/ca-cert.pem
+2018/05/09 10:15:42 [DEBUG] Initializing DB
+2018/05/09 10:15:42 [DEBUG] Using sqlite database, connect to database in home (/home/adam/hlf/hlf-lottery/crypto-config/ordererOrganizations/lotteryassociation.com/ca/root/fabric-ca-server.db) directory
+2018/05/09 10:15:42 [DEBUG] Creating SQLite database (/home/adam/hlf/hlf-lottery/crypto-config/ordererOrganizations/lotteryassociation.com/ca/root/fabric-ca-server.db) if it does not exist...
+2018/05/09 10:15:42 [DEBUG] Creating users table if it does not exist
+2018/05/09 10:15:42 [DEBUG] Creating affiliations table if it does not exist
+2018/05/09 10:15:42 [DEBUG] Creating certificates table if it does not exist
+2018/05/09 10:15:42 [DEBUG] Successfully opened sqlite3 DB
+2018/05/09 10:15:42 [DEBUG] Initializing identity registry
+2018/05/09 10:15:42 [DEBUG] Loading identity table
+2018/05/09 10:15:42 [DEBUG] Loading identity 'admin'
+2018/05/09 10:15:42 [DEBUG] DB: Getting identity admin
+2018/05/09 10:15:42 [DEBUG] Max enrollment value verification - User specified max enrollment: 0, CA max enrollment: -1
+2018/05/09 10:15:42 [DEBUG] DB: Add identity admin
+2018/05/09 10:15:43 [DEBUG] Successfully added identity admin to the database
+2018/05/09 10:15:43 [DEBUG] Registered identity: { Name:**** Pass:**** Type:client Affiliation: MaxEnrollments:-1 Attrs:map[hf.Registrar.DelegateRoles:client,user,validator,auditor hf.Revoker:1 hf.IntermediateCA:1 hf.Registrar.Roles:client,user,peer,validator,auditor]  }
+2018/05/09 10:15:43 [DEBUG] Successfully loaded identity table
+2018/05/09 10:15:43 [DEBUG] Initialized DB identity registry
+2018/05/09 10:15:43 [DEBUG] Loading affiliations table
+2018/05/09 10:15:43 [DEBUG] DB: Add affiliation org1
+2018/05/09 10:15:43 [DEBUG] Affiliation 'org1' added
+2018/05/09 10:15:43 [DEBUG] DB: Add affiliation org1.department1
+2018/05/09 10:15:43 [DEBUG] Affiliation 'org1.department1' added
+2018/05/09 10:15:43 [DEBUG] DB: Add affiliation org1.department2
+2018/05/09 10:15:43 [DEBUG] Affiliation 'org1.department2' added
+2018/05/09 10:15:43 [DEBUG] DB: Add affiliation org2
+2018/05/09 10:15:43 [DEBUG] Affiliation 'org2' added
+2018/05/09 10:15:43 [DEBUG] DB: Add affiliation org2.department1
+2018/05/09 10:15:43 [DEBUG] Affiliation 'org2.department1' added
+2018/05/09 10:15:43 [DEBUG] Successfully loaded affiliations table
+2018/05/09 10:15:43 [INFO] Initialized sqlite3 database at /home/adam/hlf/hlf-lottery/crypto-config/ordererOrganizations/lotteryassociation.com/ca/root/fabric-ca-server.db
+2018/05/09 10:15:43 [DEBUG] Initializing enrollment signer
+2018/05/09 10:15:43 [DEBUG] validating configuration
+2018/05/09 10:15:43 [DEBUG] validate local profile
+2018/05/09 10:15:43 [DEBUG] profile is valid
+2018/05/09 10:15:43 [DEBUG] validate local profile
+2018/05/09 10:15:43 [DEBUG] profile is valid
+2018/05/09 10:15:43 [DEBUG] CA initialization successful
+2018/05/09 10:15:43 [INFO] Home directory for default CA: /home/adam/hlf/hlf-lottery/crypto-config/ordererOrganizations/lotteryassociation.com/ca/root
+2018/05/09 10:15:43 [DEBUG] 1 CA instance(s) running on server
+2018/05/09 10:15:43 [INFO] Listening on http://0.0.0.0:7100
+2018/05/09 10:15:43 [DEBUG] Received request
 POST /enroll
 Authorization: Basic YWRtaW46YWRtaW5wdw==
-{"hosts":["root","root"],"certificate_request":"-----BEGIN CERTIFICATE REQUEST-----\nMIIBPzCB5wIBADBdMQswCQYDVQQGEwJVUzEXMBUGA1UECBMOTm9ydGggQ2Fyb2xp\nbmExFDASBgNVBAoTC0h5cGVybGVkZ2VyMQ8wDQYDVQQLEwZGYWJyaWMxDjAMBgNV\nBAMTBWFkbWluMFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEwbxQd5nijKBiGYKj\neL0rtsB5EBSfEuEnHjswz1lZ1KqjZ89TwGffQnbq10aUItR0PzqaII0adKrBHGYg\n8lPgP6AoMCYGCSqGSIb3DQEJDjEZMBcwFQYDVR0RBA4wDIIEcm9vdIIEcm9vdDAK\nBggqhkjOPQQDAgNHADBEAiB6+AreCSBLtIHfNsfd1I6oF7BFyaFhRu0KtmK5q5sW\nkgIgPFsfIoEji8qCyiVhcplNAh/Uvg/XOaF0R8NTpufIRGk=\n-----END CERTIFICATE REQUEST-----\n","profile":"tls","crl_override":"","label":"","CAName":""}
-2018/05/08 10:18:30 [DEBUG] Directing traffic to default CA
-2018/05/08 10:18:30 [DEBUG] DB: Getting identity admin
-2018/05/08 10:18:30 [DEBUG] DB: Login user admin with max enrollments of -1 and state of 0
-2018/05/08 10:18:30 [DEBUG] Successfully incremented state for identity admin to 1
-2018/05/08 10:18:30 [DEBUG] DB: identity admin successfully logged in
-2018/05/08 10:18:30 [DEBUG] Identity/Pass was correct
-2018/05/08 10:18:30 [DEBUG] Received request for endpoint enroll
-2018/05/08 10:18:30 [DEBUG] Enrollment request: {SignRequest:{Hosts:[root root] Request:-----BEGIN CERTIFICATE REQUEST-----
-MIIBPzCB5wIBADBdMQswCQYDVQQGEwJVUzEXMBUGA1UECBMOTm9ydGggQ2Fyb2xp
+{"hosts":["root","root"],"certificate_request":"-----BEGIN CERTIFICATE REQUEST-----\nMIIBQDCB5wIBADBdMQswCQYDVQQGEwJVUzEXMBUGA1UECBMOTm9ydGggQ2Fyb2xp\nbmExFDASBgNVBAoTC0h5cGVybGVkZ2VyMQ8wDQYDVQQLEwZGYWJyaWMxDjAMBgNV\nBAMTBWFkbWluMFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEIx626XtNdjdMv3MS\nJ33JQGp+cCAJBwc8S0/dUT261SjvDK5AFvmf1VXRYX9p94nUAsAsHE4ZqfR/UhE1\n3ReMA6AoMCYGCSqGSIb3DQEJDjEZMBcwFQYDVR0RBA4wDIIEcm9vdIIEcm9vdDAK\nBggqhkjOPQQDAgNIADBFAiEAipERDPv8zj1WPpD1OUv0CdamVFYVvK/QiM2ETb/R\na7ACIE1tRp02xo5RVKTaTXMMNI452pC9yGyhgouWrOFX/FoQ\n-----END CERTIFICATE REQUEST-----\n","profile":"tls","crl_override":"","label":"","CAName":""}
+2018/05/09 10:15:43 [DEBUG] Directing traffic to default CA
+2018/05/09 10:15:43 [DEBUG] DB: Getting identity admin
+2018/05/09 10:15:43 [DEBUG] DB: Login user admin with max enrollments of -1 and state of 0
+2018/05/09 10:15:44 [DEBUG] Successfully incremented state for identity admin to 1
+2018/05/09 10:15:44 [DEBUG] DB: identity admin successfully logged in
+2018/05/09 10:15:44 [DEBUG] Identity/Pass was correct
+2018/05/09 10:15:44 [DEBUG] Received request for endpoint enroll
+2018/05/09 10:15:44 [DEBUG] Enrollment request: {SignRequest:{Hosts:[root root] Request:-----BEGIN CERTIFICATE REQUEST-----
+MIIBQDCB5wIBADBdMQswCQYDVQQGEwJVUzEXMBUGA1UECBMOTm9ydGggQ2Fyb2xp
 bmExFDASBgNVBAoTC0h5cGVybGVkZ2VyMQ8wDQYDVQQLEwZGYWJyaWMxDjAMBgNV
-BAMTBWFkbWluMFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEwbxQd5nijKBiGYKj
-eL0rtsB5EBSfEuEnHjswz1lZ1KqjZ89TwGffQnbq10aUItR0PzqaII0adKrBHGYg
-8lPgP6AoMCYGCSqGSIb3DQEJDjEZMBcwFQYDVR0RBA4wDIIEcm9vdIIEcm9vdDAK
-BggqhkjOPQQDAgNHADBEAiB6+AreCSBLtIHfNsfd1I6oF7BFyaFhRu0KtmK5q5sW
-kgIgPFsfIoEji8qCyiVhcplNAh/Uvg/XOaF0R8NTpufIRGk=
+BAMTBWFkbWluMFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEIx626XtNdjdMv3MS
+J33JQGp+cCAJBwc8S0/dUT261SjvDK5AFvmf1VXRYX9p94nUAsAsHE4ZqfR/UhE1
+3ReMA6AoMCYGCSqGSIb3DQEJDjEZMBcwFQYDVR0RBA4wDIIEcm9vdIIEcm9vdDAK
+BggqhkjOPQQDAgNIADBFAiEAipERDPv8zj1WPpD1OUv0CdamVFYVvK/QiM2ETb/R
+a7ACIE1tRp02xo5RVKTaTXMMNI452pC9yGyhgouWrOFX/FoQ
 -----END CERTIFICATE REQUEST-----
  Subject:<nil> Profile:tls CRLOverride: Label: Serial:<nil> Extensions:[]} CAName:}
-2018/05/08 10:18:30 [DEBUG] csrAuthCheck: enrollment ID=admin, CommonName=admin, Subject=<nil>
-2018/05/08 10:18:30 [DEBUG] CSR authorization check passed
-2018/05/08 10:18:30 [DEBUG] Checking CSR fields to make sure that they do not exceed maximum character limits
-2018/05/08 10:18:30 [INFO] signed certificate with serial number 339741377384488342572923773236324761859852739038
-2018/05/08 10:18:30 [DEBUG] DB: Insert Certificate
-2018/05/08 10:18:30 [DEBUG] Saved serial number as hex 3b8287bea3df0de12a5a1f59552082a3c16e21de
-2018/05/08 10:18:30 [DEBUG] saved certificate with serial number 339741377384488342572923773236324761859852739038
-2018/05/08 10:18:30 [INFO] 127.0.0.1:55236 - "POST /enroll" 200
-2018/05/08 10:18:30 [DEBUG] Received request
+2018/05/09 10:15:44 [DEBUG] csrAuthCheck: enrollment ID=admin, CommonName=admin, Subject=<nil>
+2018/05/09 10:15:44 [DEBUG] CSR authorization check passed
+2018/05/09 10:15:44 [DEBUG] Checking CSR fields to make sure that they do not exceed maximum character limits
+2018/05/09 10:15:44 [INFO] signed certificate with serial number 561953639454394752911772789984614281500163363595
+2018/05/09 10:15:44 [DEBUG] DB: Insert Certificate
+2018/05/09 10:15:44 [DEBUG] Saved serial number as hex 626edf6981b4ba36c38ad7fa7d95e9deb8d4d30b
+2018/05/09 10:15:44 [DEBUG] saved certificate with serial number 561953639454394752911772789984614281500163363595
+2018/05/09 10:15:44 [INFO] 127.0.0.1:40408 - "POST /enroll" 200
+2018/05/09 10:15:44 [DEBUG] Received request
 POST /enroll
 Authorization: Basic YWRtaW46YWRtaW5wdw==
-{"hosts":["adam-VirtualBox"],"certificate_request":"-----BEGIN CERTIFICATE REQUEST-----\nMIIBRDCB7AIBADBdMQswCQYDVQQGEwJVUzEXMBUGA1UECBMOTm9ydGggQ2Fyb2xp\nbmExFDASBgNVBAoTC0h5cGVybGVkZ2VyMQ8wDQYDVQQLEwZGYWJyaWMxDjAMBgNV\nBAMTBWFkbWluMFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEzBu1UC878zapXenq\nTzDrPWLMI/hzVRufa6SPj+BvvrVVWjk1qPasbbtHJ91/KpaRESxQ/tsJae2yH6Wq\n6SwqmqAtMCsGCSqGSIb3DQEJDjEeMBwwGgYDVR0RBBMwEYIPYWRhbS1WaXJ0dWFs\nQm94MAoGCCqGSM49BAMCA0cAMEQCIB6eaRA8q/PHUOzyixvt2EETl4VbPtzEnBY8\nKP3+8hN/AiA/yPE3gGyW2yoaBA+XckI3UVbrigiGcAYb0ZVIgNDqIQ==\n-----END CERTIFICATE REQUEST-----\n","profile":"","crl_override":"","label":"","CAName":""}
-2018/05/08 10:18:30 [DEBUG] Directing traffic to default CA
-2018/05/08 10:18:30 [DEBUG] DB: Getting identity admin
-2018/05/08 10:18:30 [DEBUG] DB: Login user admin with max enrollments of -1 and state of 1
-2018/05/08 10:18:30 [DEBUG] Successfully incremented state for identity admin to 2
-2018/05/08 10:18:30 [DEBUG] DB: identity admin successfully logged in
-2018/05/08 10:18:30 [DEBUG] Identity/Pass was correct
-2018/05/08 10:18:30 [DEBUG] Received request for endpoint enroll
-2018/05/08 10:18:30 [DEBUG] Enrollment request: {SignRequest:{Hosts:[adam-VirtualBox] Request:-----BEGIN CERTIFICATE REQUEST-----
+{"hosts":["adam-VirtualBox"],"certificate_request":"-----BEGIN CERTIFICATE REQUEST-----\nMIIBRDCB7AIBADBdMQswCQYDVQQGEwJVUzEXMBUGA1UECBMOTm9ydGggQ2Fyb2xp\nbmExFDASBgNVBAoTC0h5cGVybGVkZ2VyMQ8wDQYDVQQLEwZGYWJyaWMxDjAMBgNV\nBAMTBWFkbWluMFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAE0eMSDCNyBXojJ+a9\n1BDL0qXH8ZW7Jt9m+qu9Ebmqgvb2s4TmqzJb+T2DYebZaBbjLIWU5AEOpLuOWy2Y\nGXLPjqAtMCsGCSqGSIb3DQEJDjEeMBwwGgYDVR0RBBMwEYIPYWRhbS1WaXJ0dWFs\nQm94MAoGCCqGSM49BAMCA0cAMEQCIDWpxYd7wiNAFZrd+lH/LnpMB08HF4bl3g0p\nDkguMdvIAiB0NZKqjWoDWkOkk9BbvUXqKVCLyyg4znZabP5gb71F4Q==\n-----END CERTIFICATE REQUEST-----\n","profile":"","crl_override":"","label":"","CAName":""}
+2018/05/09 10:15:44 [DEBUG] Directing traffic to default CA
+2018/05/09 10:15:44 [DEBUG] DB: Getting identity admin
+2018/05/09 10:15:44 [DEBUG] DB: Login user admin with max enrollments of -1 and state of 1
+2018/05/09 10:15:44 [DEBUG] Successfully incremented state for identity admin to 2
+2018/05/09 10:15:44 [DEBUG] DB: identity admin successfully logged in
+2018/05/09 10:15:44 [DEBUG] Identity/Pass was correct
+2018/05/09 10:15:44 [DEBUG] Received request for endpoint enroll
+2018/05/09 10:15:44 [DEBUG] Enrollment request: {SignRequest:{Hosts:[adam-VirtualBox] Request:-----BEGIN CERTIFICATE REQUEST-----
 MIIBRDCB7AIBADBdMQswCQYDVQQGEwJVUzEXMBUGA1UECBMOTm9ydGggQ2Fyb2xp
 bmExFDASBgNVBAoTC0h5cGVybGVkZ2VyMQ8wDQYDVQQLEwZGYWJyaWMxDjAMBgNV
-BAMTBWFkbWluMFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEzBu1UC878zapXenq
-TzDrPWLMI/hzVRufa6SPj+BvvrVVWjk1qPasbbtHJ91/KpaRESxQ/tsJae2yH6Wq
-6SwqmqAtMCsGCSqGSIb3DQEJDjEeMBwwGgYDVR0RBBMwEYIPYWRhbS1WaXJ0dWFs
-Qm94MAoGCCqGSM49BAMCA0cAMEQCIB6eaRA8q/PHUOzyixvt2EETl4VbPtzEnBY8
-KP3+8hN/AiA/yPE3gGyW2yoaBA+XckI3UVbrigiGcAYb0ZVIgNDqIQ==
+BAMTBWFkbWluMFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAE0eMSDCNyBXojJ+a9
+1BDL0qXH8ZW7Jt9m+qu9Ebmqgvb2s4TmqzJb+T2DYebZaBbjLIWU5AEOpLuOWy2Y
+GXLPjqAtMCsGCSqGSIb3DQEJDjEeMBwwGgYDVR0RBBMwEYIPYWRhbS1WaXJ0dWFs
+Qm94MAoGCCqGSM49BAMCA0cAMEQCIDWpxYd7wiNAFZrd+lH/LnpMB08HF4bl3g0p
+DkguMdvIAiB0NZKqjWoDWkOkk9BbvUXqKVCLyyg4znZabP5gb71F4Q==
 -----END CERTIFICATE REQUEST-----
  Subject:<nil> Profile: CRLOverride: Label: Serial:<nil> Extensions:[]} CAName:}
-2018/05/08 10:18:30 [DEBUG] csrAuthCheck: enrollment ID=admin, CommonName=admin, Subject=<nil>
-2018/05/08 10:18:30 [DEBUG] CSR authorization check passed
-2018/05/08 10:18:30 [DEBUG] Checking CSR fields to make sure that they do not exceed maximum character limits
-2018/05/08 10:18:30 [INFO] signed certificate with serial number 491061948657316072709419746573593153396578750671
-2018/05/08 10:18:30 [DEBUG] DB: Insert Certificate
-2018/05/08 10:18:30 [DEBUG] Saved serial number as hex 5603fab6604b3dbd4920e7c2a4103a7e907890cf
-2018/05/08 10:18:30 [DEBUG] saved certificate with serial number 491061948657316072709419746573593153396578750671
-2018/05/08 10:18:30 [INFO] 127.0.0.1:55238 - "POST /enroll" 200
-2018/05/08 10:18:30 [DEBUG] Received request
+2018/05/09 10:15:44 [DEBUG] csrAuthCheck: enrollment ID=admin, CommonName=admin, Subject=<nil>
+2018/05/09 10:15:44 [DEBUG] CSR authorization check passed
+2018/05/09 10:15:44 [DEBUG] Checking CSR fields to make sure that they do not exceed maximum character limits
+2018/05/09 10:15:44 [INFO] signed certificate with serial number 378798809809692964941615026743659822167856222375
+2018/05/09 10:15:44 [DEBUG] DB: Insert Certificate
+2018/05/09 10:15:44 [DEBUG] Saved serial number as hex 4259ed1492e14f6f098b1edd0492ba37087b90a7
+2018/05/09 10:15:44 [DEBUG] saved certificate with serial number 378798809809692964941615026743659822167856222375
+2018/05/09 10:15:44 [INFO] 127.0.0.1:40410 - "POST /enroll" 200
+2018/05/09 10:15:44 [DEBUG] Received request
 POST /register
-Authorization: LS0tLS1CRUdJTiBDRVJUSUZJQ0FURS0tLS0tCk1JSUNRekNDQWVtZ0F3SUJBZ0lVVmdQNnRtQkxQYjFKSU9mQ3BCQTZmcEI0a004d0NnWUlLb1pJemowRUF3SXcKYURFTE1Ba0dBMVVFQmhNQ1ZWTXhGekFWQmdOVkJBZ1REazV2Y25Sb0lFTmhjbTlzYVc1aE1SUXdFZ1lEVlFRSwpFd3RJZVhCbGNteGxaR2RsY2pFUE1BMEdBMVVFQ3hNR1JtRmljbWxqTVJrd0Z3WURWUVFERXhCbVlXSnlhV010ClkyRXRjMlZ5ZG1WeU1CNFhEVEU0TURVd09EQTRNVFF3TUZvWERURTVNRFV3T0RBNE1UUXdNRm93WFRFTE1Ba0cKQTFVRUJoTUNWVk14RnpBVkJnTlZCQWdURGs1dmNuUm9JRU5oY205c2FXNWhNUlF3RWdZRFZRUUtFd3RJZVhCbApjbXhsWkdkbGNqRVBNQTBHQTFVRUN4TUdSbUZpY21sak1RNHdEQVlEVlFRREV3VmhaRzFwYmpCWk1CTUdCeXFHClNNNDlBZ0VHQ0NxR1NNNDlBd0VIQTBJQUJNd2J0VkF2Ty9NMnFWM3A2azh3NnoxaXpDUDRjMVVibjJ1a2o0L2cKYjc2MVZWbzVOYWoyckcyN1J5ZmRmeXFXa1JFc1VQN2JDV250c2grbHF1a3NLcHFqZkRCNk1BNEdBMVVkRHdFQgovd1FFQXdJSGdEQU1CZ05WSFJNQkFmOEVBakFBTUIwR0ExVWREZ1FXQkJUUXF0a2pwbWlLcVRsYmFUclh0UytlCnhIRkRsVEFmQmdOVkhTTUVHREFXZ0JSRmozY2NaWlBUVUR5ZmNBdnAzV3VqTURnRFlEQWFCZ05WSFJFRUV6QVIKZ2c5aFpHRnRMVlpwY25SMVlXeENiM2d3Q2dZSUtvWkl6ajBFQXdJRFNBQXdSUUloQUsvTVNNcmdHcnVZZjlhTgpjVkpkN0ZqdTZIT2lOZlE3NTRHSDltNEphZlo0QWlBRDJpekpRUXBDN1NuaXhTNzVmQW5VQ1RaM3ZyYkY0M1FtCmxJd0MyRTFBOUE9PQotLS0tLUVORCBDRVJUSUZJQ0FURS0tLS0tCg==.MEQCIFvu6G62lT667U8+Gm8KovUgZSNu+EQcmez1kPfprnR0AiBXg1ni5bA5hiCzXmtkX69nCrRDXfC6Cm/U6TeDV2UEGA==
+Authorization: LS0tLS1CRUdJTiBDRVJUSUZJQ0FURS0tLS0tCk1JSUNRekNDQWVtZ0F3SUJBZ0lVUWxudEZKTGhUMjhKaXg3ZEJKSzZOd2g3a0tjd0NnWUlLb1pJemowRUF3SXcKYURFTE1Ba0dBMVVFQmhNQ1ZWTXhGekFWQmdOVkJBZ1REazV2Y25Sb0lFTmhjbTlzYVc1aE1SUXdFZ1lEVlFRSwpFd3RJZVhCbGNteGxaR2RsY2pFUE1BMEdBMVVFQ3hNR1JtRmljbWxqTVJrd0Z3WURWUVFERXhCbVlXSnlhV010ClkyRXRjMlZ5ZG1WeU1CNFhEVEU0TURVd09UQTRNVEV3TUZvWERURTVNRFV3T1RBNE1URXdNRm93WFRFTE1Ba0cKQTFVRUJoTUNWVk14RnpBVkJnTlZCQWdURGs1dmNuUm9JRU5oY205c2FXNWhNUlF3RWdZRFZRUUtFd3RJZVhCbApjbXhsWkdkbGNqRVBNQTBHQTFVRUN4TUdSbUZpY21sak1RNHdEQVlEVlFRREV3VmhaRzFwYmpCWk1CTUdCeXFHClNNNDlBZ0VHQ0NxR1NNNDlBd0VIQTBJQUJOSGpFZ3dqY2dWNkl5Zm12ZFFReTlLbHgvR1Z1eWJmWnZxcnZSRzUKcW9MMjlyT0U1cXN5Vy9rOWcySG0yV2dXNHl5RmxPUUJEcVM3amxzdG1CbHl6NDZqZkRCNk1BNEdBMVVkRHdFQgovd1FFQXdJSGdEQU1CZ05WSFJNQkFmOEVBakFBTUIwR0ExVWREZ1FXQkJUK0Z4d2VnemNXQTRiRVk1bjg4QUg2Cm1UdXNXVEFmQmdOVkhTTUVHREFXZ0JRZVREOVFnQ29hSmRWVGxTamlZSkJlZDhxSy9EQWFCZ05WSFJFRUV6QVIKZ2c5aFpHRnRMVlpwY25SMVlXeENiM2d3Q2dZSUtvWkl6ajBFQXdJRFNBQXdSUUloQU5wMTNyUWlwakNQZCtDcwo1dHhhZzhKd2dZN3pIZTJPYXRpRnFTM2ZwZGxGQWlBV0lCKzU5SDR4bGkvZUpodExWTE1UWmE0eDdLbjFQbkdCCkZxYjFodmh0aHc9PQotLS0tLUVORCBDRVJUSUZJQ0FURS0tLS0tCg==.MEUCIQDNCXoTmgGIr9j/3KEl3KC5WPw82NYOaewy39sQ9B5/PAIgVv/o0rYLef9XC30PFoNY9rodtwBMYpUG/reDmaAZsG0=
 {"id":"nodeAdmin","type":"user","secret":"secret","max_enrollments":-1,"affiliation":"org1","attrs":[{"name":"","value":""}]}
-2018/05/08 10:18:30 [DEBUG] Directing traffic to default CA
-2018/05/08 10:18:30 [DEBUG] Checking for revocation/expiration of certificate owned by 'admin'
-2018/05/08 10:18:30 [DEBUG] DB: Get certificate by serial (5603fab6604b3dbd4920e7c2a4103a7e907890cf) and aki (458f771c6593d3503c9f700be9dd6ba330380360)
-2018/05/08 10:18:30 [DEBUG] Successful authentication of 'admin'
-2018/05/08 10:18:30 [DEBUG] Register request received
-2018/05/08 10:18:30 [DEBUG] Received registration request from admin: &{RegistrationRequest:{Name:nodeAdmin Type:user Secret:<<user-specified>> MaxEnrollments:-1 Affiliation:org1 Attributes:[{Name: Value:}] CAName:}}
-2018/05/08 10:18:30 [DEBUG] canRegister - Check to see if user admin can register
-2018/05/08 10:18:30 [DEBUG] DB: Getting identity admin
-2018/05/08 10:18:30 [DEBUG] Validate ID
-2018/05/08 10:18:30 [DEBUG] An affiliation is required for identity type user
-2018/05/08 10:18:30 [DEBUG] Validating affiliation: org1
-2018/05/08 10:18:30 [DEBUG] DB: Get affiliation org1
-2018/05/08 10:18:30 [DEBUG] Registering user id: nodeAdmin
-2018/05/08 10:18:30 [DEBUG] Max enrollment value verification - User specified max enrollment: -1, CA max enrollment: -1
-2018/05/08 10:18:30 [DEBUG] DB: Getting identity nodeAdmin
-2018/05/08 10:18:30 [DEBUG] DB: Add identity nodeAdmin
-2018/05/08 10:18:30 [DEBUG] Successfully added identity nodeAdmin to the database
-2018/05/08 10:18:30 [DEBUG] Registration completed - sending response 0xc42000e6f8
-2018/05/08 10:18:30 [INFO] 127.0.0.1:55240 - "POST /register" 200
-2018/05/08 10:18:30 [DEBUG] Received request
+2018/05/09 10:15:44 [DEBUG] Directing traffic to default CA
+2018/05/09 10:15:44 [DEBUG] Checking for revocation/expiration of certificate owned by 'admin'
+2018/05/09 10:15:44 [DEBUG] DB: Get certificate by serial (4259ed1492e14f6f098b1edd0492ba37087b90a7) and aki (1e4c3f50802a1a25d5539528e260905e77ca8afc)
+2018/05/09 10:15:44 [DEBUG] Successful authentication of 'admin'
+2018/05/09 10:15:44 [DEBUG] Register request received
+2018/05/09 10:15:44 [DEBUG] Received registration request from admin: &{RegistrationRequest:{Name:nodeAdmin Type:user Secret:<<user-specified>> MaxEnrollments:-1 Affiliation:org1 Attributes:[{Name: Value:}] CAName:}}
+2018/05/09 10:15:44 [DEBUG] canRegister - Check to see if user admin can register
+2018/05/09 10:15:44 [DEBUG] DB: Getting identity admin
+2018/05/09 10:15:44 [DEBUG] Validate ID
+2018/05/09 10:15:44 [DEBUG] An affiliation is required for identity type user
+2018/05/09 10:15:44 [DEBUG] Validating affiliation: org1
+2018/05/09 10:15:44 [DEBUG] DB: Get affiliation org1
+2018/05/09 10:15:44 [DEBUG] Registering user id: nodeAdmin
+2018/05/09 10:15:44 [DEBUG] Max enrollment value verification - User specified max enrollment: -1, CA max enrollment: -1
+2018/05/09 10:15:44 [DEBUG] DB: Getting identity nodeAdmin
+2018/05/09 10:15:44 [DEBUG] DB: Add identity nodeAdmin
+2018/05/09 10:15:44 [DEBUG] Successfully added identity nodeAdmin to the database
+2018/05/09 10:15:44 [DEBUG] Registration completed - sending response 0xc42000e6f8
+2018/05/09 10:15:44 [INFO] 127.0.0.1:40412 - "POST /register" 200
+2018/05/09 10:15:44 [DEBUG] Received request
 POST /enroll
 Authorization: Basic bm9kZUFkbWluOnNlY3JldA==
-{"hosts":["adam-VirtualBox"],"certificate_request":"-----BEGIN CERTIFICATE REQUEST-----\nMIIBSDCB8AIBADBhMQswCQYDVQQGEwJVUzEXMBUGA1UECBMOTm9ydGggQ2Fyb2xp\nbmExFDASBgNVBAoTC0h5cGVybGVkZ2VyMQ8wDQYDVQQLEwZGYWJyaWMxEjAQBgNV\nBAMTCW5vZGVBZG1pbjBZMBMGByqGSM49AgEGCCqGSM49AwEHA0IABIOhMZBPDOLi\nag6njH8A03kccetg90NrLbWHJpAqoivu9FAHaq6kSn+XmN4ftMvyZiOybNReSuiR\nxaRIZmPIN8igLTArBgkqhkiG9w0BCQ4xHjAcMBoGA1UdEQQTMBGCD2FkYW0tVmly\ndHVhbEJveDAKBggqhkjOPQQDAgNHADBEAiAjkJy0LDra2F3DMGQ3rj3LPXrEpMlS\nE4wX0JMO6zFMoQIgY8uBBlcukojP+ceWP7aLMsL7GTvogEgAhO1vr6Ew1P0=\n-----END CERTIFICATE REQUEST-----\n","profile":"","crl_override":"","label":"","CAName":""}
-2018/05/08 10:18:30 [DEBUG] Directing traffic to default CA
-2018/05/08 10:18:30 [DEBUG] DB: Getting identity nodeAdmin
-2018/05/08 10:18:30 [DEBUG] DB: Login user nodeAdmin with max enrollments of -1 and state of 0
-2018/05/08 10:18:31 [DEBUG] Successfully incremented state for identity nodeAdmin to 1
-2018/05/08 10:18:31 [DEBUG] DB: identity nodeAdmin successfully logged in
-2018/05/08 10:18:31 [DEBUG] Identity/Pass was correct
-2018/05/08 10:18:31 [DEBUG] Received request for endpoint enroll
-2018/05/08 10:18:31 [DEBUG] Enrollment request: {SignRequest:{Hosts:[adam-VirtualBox] Request:-----BEGIN CERTIFICATE REQUEST-----
+{"hosts":["adam-VirtualBox"],"certificate_request":"-----BEGIN CERTIFICATE REQUEST-----\nMIIBSDCB8AIBADBhMQswCQYDVQQGEwJVUzEXMBUGA1UECBMOTm9ydGggQ2Fyb2xp\nbmExFDASBgNVBAoTC0h5cGVybGVkZ2VyMQ8wDQYDVQQLEwZGYWJyaWMxEjAQBgNV\nBAMTCW5vZGVBZG1pbjBZMBMGByqGSM49AgEGCCqGSM49AwEHA0IABC7VCwE6crTt\nTgueYeiDietENXsDfhtnvI67xuo4IvhjpBW+9/RgB32f7DFjw1BQWiss1g3740gv\nh+Qhl6Sr6H6gLTArBgkqhkiG9w0BCQ4xHjAcMBoGA1UdEQQTMBGCD2FkYW0tVmly\ndHVhbEJveDAKBggqhkjOPQQDAgNHADBEAiAuP7L3yS+dRDWP8DfENQ2UJ0tLsLYu\nf3sg1R7HA6KYUgIgA1qCDsdBdCiVs/xa537mLI+EzZqsMA3vOqwAgmIDYHs=\n-----END CERTIFICATE REQUEST-----\n","profile":"","crl_override":"","label":"","CAName":""}
+2018/05/09 10:15:44 [DEBUG] Directing traffic to default CA
+2018/05/09 10:15:44 [DEBUG] DB: Getting identity nodeAdmin
+2018/05/09 10:15:44 [DEBUG] DB: Login user nodeAdmin with max enrollments of -1 and state of 0
+2018/05/09 10:15:45 [DEBUG] Successfully incremented state for identity nodeAdmin to 1
+2018/05/09 10:15:45 [DEBUG] DB: identity nodeAdmin successfully logged in
+2018/05/09 10:15:45 [DEBUG] Identity/Pass was correct
+2018/05/09 10:15:45 [DEBUG] Received request for endpoint enroll
+2018/05/09 10:15:45 [DEBUG] Enrollment request: {SignRequest:{Hosts:[adam-VirtualBox] Request:-----BEGIN CERTIFICATE REQUEST-----
 MIIBSDCB8AIBADBhMQswCQYDVQQGEwJVUzEXMBUGA1UECBMOTm9ydGggQ2Fyb2xp
 bmExFDASBgNVBAoTC0h5cGVybGVkZ2VyMQ8wDQYDVQQLEwZGYWJyaWMxEjAQBgNV
-BAMTCW5vZGVBZG1pbjBZMBMGByqGSM49AgEGCCqGSM49AwEHA0IABIOhMZBPDOLi
-ag6njH8A03kccetg90NrLbWHJpAqoivu9FAHaq6kSn+XmN4ftMvyZiOybNReSuiR
-xaRIZmPIN8igLTArBgkqhkiG9w0BCQ4xHjAcMBoGA1UdEQQTMBGCD2FkYW0tVmly
-dHVhbEJveDAKBggqhkjOPQQDAgNHADBEAiAjkJy0LDra2F3DMGQ3rj3LPXrEpMlS
-E4wX0JMO6zFMoQIgY8uBBlcukojP+ceWP7aLMsL7GTvogEgAhO1vr6Ew1P0=
+BAMTCW5vZGVBZG1pbjBZMBMGByqGSM49AgEGCCqGSM49AwEHA0IABC7VCwE6crTt
+TgueYeiDietENXsDfhtnvI67xuo4IvhjpBW+9/RgB32f7DFjw1BQWiss1g3740gv
+h+Qhl6Sr6H6gLTArBgkqhkiG9w0BCQ4xHjAcMBoGA1UdEQQTMBGCD2FkYW0tVmly
+dHVhbEJveDAKBggqhkjOPQQDAgNHADBEAiAuP7L3yS+dRDWP8DfENQ2UJ0tLsLYu
+f3sg1R7HA6KYUgIgA1qCDsdBdCiVs/xa537mLI+EzZqsMA3vOqwAgmIDYHs=
 -----END CERTIFICATE REQUEST-----
  Subject:<nil> Profile: CRLOverride: Label: Serial:<nil> Extensions:[]} CAName:}
-2018/05/08 10:18:31 [DEBUG] csrAuthCheck: enrollment ID=nodeAdmin, CommonName=nodeAdmin, Subject=<nil>
-2018/05/08 10:18:31 [DEBUG] CSR authorization check passed
-2018/05/08 10:18:31 [DEBUG] Checking CSR fields to make sure that they do not exceed maximum character limits
-2018/05/08 10:18:31 [INFO] signed certificate with serial number 568236302259171054916698929952242879346758546358
-2018/05/08 10:18:31 [DEBUG] DB: Insert Certificate
-2018/05/08 10:18:31 [DEBUG] Saved serial number as hex 638898d81831629fe824ff1aee5ca9bc9b5273b6
-2018/05/08 10:18:31 [DEBUG] saved certificate with serial number 568236302259171054916698929952242879346758546358
-2018/05/08 10:18:31 [INFO] 127.0.0.1:55242 - "POST /enroll" 200
-2018/05/08 10:18:31 [DEBUG] Received request
+2018/05/09 10:15:45 [DEBUG] csrAuthCheck: enrollment ID=nodeAdmin, CommonName=nodeAdmin, Subject=<nil>
+2018/05/09 10:15:45 [DEBUG] CSR authorization check passed
+2018/05/09 10:15:45 [DEBUG] Checking CSR fields to make sure that they do not exceed maximum character limits
+2018/05/09 10:15:45 [INFO] signed certificate with serial number 117782261548368215331093976168291740222349878067
+2018/05/09 10:15:45 [DEBUG] DB: Insert Certificate
+2018/05/09 10:15:45 [DEBUG] Saved serial number as hex 14a18a0db1652a9e3bd04c0459e31665907ba333
+2018/05/09 10:15:45 [DEBUG] saved certificate with serial number 117782261548368215331093976168291740222349878067
+2018/05/09 10:15:45 [INFO] 127.0.0.1:40414 - "POST /enroll" 200
+2018/05/09 10:15:45 [DEBUG] Received request
 POST /register
-Authorization: LS0tLS1CRUdJTiBDRVJUSUZJQ0FURS0tLS0tCk1JSUNRekNDQWVtZ0F3SUJBZ0lVVmdQNnRtQkxQYjFKSU9mQ3BCQTZmcEI0a004d0NnWUlLb1pJemowRUF3SXcKYURFTE1Ba0dBMVVFQmhNQ1ZWTXhGekFWQmdOVkJBZ1REazV2Y25Sb0lFTmhjbTlzYVc1aE1SUXdFZ1lEVlFRSwpFd3RJZVhCbGNteGxaR2RsY2pFUE1BMEdBMVVFQ3hNR1JtRmljbWxqTVJrd0Z3WURWUVFERXhCbVlXSnlhV010ClkyRXRjMlZ5ZG1WeU1CNFhEVEU0TURVd09EQTRNVFF3TUZvWERURTVNRFV3T0RBNE1UUXdNRm93WFRFTE1Ba0cKQTFVRUJoTUNWVk14RnpBVkJnTlZCQWdURGs1dmNuUm9JRU5oY205c2FXNWhNUlF3RWdZRFZRUUtFd3RJZVhCbApjbXhsWkdkbGNqRVBNQTBHQTFVRUN4TUdSbUZpY21sak1RNHdEQVlEVlFRREV3VmhaRzFwYmpCWk1CTUdCeXFHClNNNDlBZ0VHQ0NxR1NNNDlBd0VIQTBJQUJNd2J0VkF2Ty9NMnFWM3A2azh3NnoxaXpDUDRjMVVibjJ1a2o0L2cKYjc2MVZWbzVOYWoyckcyN1J5ZmRmeXFXa1JFc1VQN2JDV250c2grbHF1a3NLcHFqZkRCNk1BNEdBMVVkRHdFQgovd1FFQXdJSGdEQU1CZ05WSFJNQkFmOEVBakFBTUIwR0ExVWREZ1FXQkJUUXF0a2pwbWlLcVRsYmFUclh0UytlCnhIRkRsVEFmQmdOVkhTTUVHREFXZ0JSRmozY2NaWlBUVUR5ZmNBdnAzV3VqTURnRFlEQWFCZ05WSFJFRUV6QVIKZ2c5aFpHRnRMVlpwY25SMVlXeENiM2d3Q2dZSUtvWkl6ajBFQXdJRFNBQXdSUUloQUsvTVNNcmdHcnVZZjlhTgpjVkpkN0ZqdTZIT2lOZlE3NTRHSDltNEphZlo0QWlBRDJpekpRUXBDN1NuaXhTNzVmQW5VQ1RaM3ZyYkY0M1FtCmxJd0MyRTFBOUE9PQotLS0tLUVORCBDRVJUSUZJQ0FURS0tLS0tCg==.MEUCIQCidh3fXxrmxm5szra90+iG/kyNJgxoDgeKOgUZis8vIAIgI0fnD3q1CEtqPaJ7SgDvzf16O+KMpzq1sXF679lvBwo=
+Authorization: LS0tLS1CRUdJTiBDRVJUSUZJQ0FURS0tLS0tCk1JSUNRekNDQWVtZ0F3SUJBZ0lVUWxudEZKTGhUMjhKaXg3ZEJKSzZOd2g3a0tjd0NnWUlLb1pJemowRUF3SXcKYURFTE1Ba0dBMVVFQmhNQ1ZWTXhGekFWQmdOVkJBZ1REazV2Y25Sb0lFTmhjbTlzYVc1aE1SUXdFZ1lEVlFRSwpFd3RJZVhCbGNteGxaR2RsY2pFUE1BMEdBMVVFQ3hNR1JtRmljbWxqTVJrd0Z3WURWUVFERXhCbVlXSnlhV010ClkyRXRjMlZ5ZG1WeU1CNFhEVEU0TURVd09UQTRNVEV3TUZvWERURTVNRFV3T1RBNE1URXdNRm93WFRFTE1Ba0cKQTFVRUJoTUNWVk14RnpBVkJnTlZCQWdURGs1dmNuUm9JRU5oY205c2FXNWhNUlF3RWdZRFZRUUtFd3RJZVhCbApjbXhsWkdkbGNqRVBNQTBHQTFVRUN4TUdSbUZpY21sak1RNHdEQVlEVlFRREV3VmhaRzFwYmpCWk1CTUdCeXFHClNNNDlBZ0VHQ0NxR1NNNDlBd0VIQTBJQUJOSGpFZ3dqY2dWNkl5Zm12ZFFReTlLbHgvR1Z1eWJmWnZxcnZSRzUKcW9MMjlyT0U1cXN5Vy9rOWcySG0yV2dXNHl5RmxPUUJEcVM3amxzdG1CbHl6NDZqZkRCNk1BNEdBMVVkRHdFQgovd1FFQXdJSGdEQU1CZ05WSFJNQkFmOEVBakFBTUIwR0ExVWREZ1FXQkJUK0Z4d2VnemNXQTRiRVk1bjg4QUg2Cm1UdXNXVEFmQmdOVkhTTUVHREFXZ0JRZVREOVFnQ29hSmRWVGxTamlZSkJlZDhxSy9EQWFCZ05WSFJFRUV6QVIKZ2c5aFpHRnRMVlpwY25SMVlXeENiM2d3Q2dZSUtvWkl6ajBFQXdJRFNBQXdSUUloQU5wMTNyUWlwakNQZCtDcwo1dHhhZzhKd2dZN3pIZTJPYXRpRnFTM2ZwZGxGQWlBV0lCKzU5SDR4bGkvZUpodExWTE1UWmE0eDdLbjFQbkdCCkZxYjFodmh0aHc9PQotLS0tLUVORCBDRVJUSUZJQ0FURS0tLS0tCg==.MEQCIC6fakxhWA9y9UTnjmPZJEFgdeJCEuRPBr23+RzDKr+DAiBsg+uwzpzbOo/c9j+1M0MHjwFtEY+lxNJox5irBG86SA==
 {"id":"User1@lotteryassociation.com","type":"user","secret":"secret","max_enrollments":-1,"affiliation":"org1","attrs":[{"name":"","value":""}]}
-2018/05/08 10:18:31 [DEBUG] Directing traffic to default CA
-2018/05/08 10:18:31 [DEBUG] Checking for revocation/expiration of certificate owned by 'admin'
-2018/05/08 10:18:31 [DEBUG] DB: Get certificate by serial (5603fab6604b3dbd4920e7c2a4103a7e907890cf) and aki (458f771c6593d3503c9f700be9dd6ba330380360)
-2018/05/08 10:18:31 [DEBUG] Successful authentication of 'admin'
-2018/05/08 10:18:31 [DEBUG] Register request received
-2018/05/08 10:18:31 [DEBUG] Received registration request from admin: &{RegistrationRequest:{Name:User1@lotteryassociation.com Type:user Secret:<<user-specified>> MaxEnrollments:-1 Affiliation:org1 Attributes:[{Name: Value:}] CAName:}}
-2018/05/08 10:18:31 [DEBUG] canRegister - Check to see if user admin can register
-2018/05/08 10:18:31 [DEBUG] DB: Getting identity admin
-2018/05/08 10:18:31 [DEBUG] Validate ID
-2018/05/08 10:18:31 [DEBUG] An affiliation is required for identity type user
-2018/05/08 10:18:31 [DEBUG] Validating affiliation: org1
-2018/05/08 10:18:31 [DEBUG] DB: Get affiliation org1
-2018/05/08 10:18:31 [DEBUG] Registering user id: User1@lotteryassociation.com
-2018/05/08 10:18:31 [DEBUG] Max enrollment value verification - User specified max enrollment: -1, CA max enrollment: -1
-2018/05/08 10:18:31 [DEBUG] DB: Getting identity User1@lotteryassociation.com
-2018/05/08 10:18:31 [DEBUG] DB: Add identity User1@lotteryassociation.com
-2018/05/08 10:18:31 [DEBUG] Successfully added identity User1@lotteryassociation.com to the database
-2018/05/08 10:18:31 [DEBUG] Registration completed - sending response 0xc42000e7e8
-2018/05/08 10:18:31 [INFO] 127.0.0.1:55244 - "POST /register" 200
-2018/05/08 10:18:31 [DEBUG] Received request
+2018/05/09 10:15:45 [DEBUG] Directing traffic to default CA
+2018/05/09 10:15:45 [DEBUG] Checking for revocation/expiration of certificate owned by 'admin'
+2018/05/09 10:15:45 [DEBUG] DB: Get certificate by serial (4259ed1492e14f6f098b1edd0492ba37087b90a7) and aki (1e4c3f50802a1a25d5539528e260905e77ca8afc)
+2018/05/09 10:15:45 [DEBUG] Successful authentication of 'admin'
+2018/05/09 10:15:45 [DEBUG] Register request received
+2018/05/09 10:15:45 [DEBUG] Received registration request from admin: &{RegistrationRequest:{Name:User1@lotteryassociation.com Type:user Secret:<<user-specified>> MaxEnrollments:-1 Affiliation:org1 Attributes:[{Name: Value:}] CAName:}}
+2018/05/09 10:15:45 [DEBUG] canRegister - Check to see if user admin can register
+2018/05/09 10:15:45 [DEBUG] DB: Getting identity admin
+2018/05/09 10:15:45 [DEBUG] Validate ID
+2018/05/09 10:15:45 [DEBUG] An affiliation is required for identity type user
+2018/05/09 10:15:45 [DEBUG] Validating affiliation: org1
+2018/05/09 10:15:45 [DEBUG] DB: Get affiliation org1
+2018/05/09 10:15:45 [DEBUG] Registering user id: User1@lotteryassociation.com
+2018/05/09 10:15:45 [DEBUG] Max enrollment value verification - User specified max enrollment: -1, CA max enrollment: -1
+2018/05/09 10:15:45 [DEBUG] DB: Getting identity User1@lotteryassociation.com
+2018/05/09 10:15:45 [DEBUG] DB: Add identity User1@lotteryassociation.com
+2018/05/09 10:15:45 [DEBUG] Successfully added identity User1@lotteryassociation.com to the database
+2018/05/09 10:15:45 [DEBUG] Registration completed - sending response 0xc42000e7e8
+2018/05/09 10:15:45 [INFO] 127.0.0.1:40416 - "POST /register" 200
+2018/05/09 10:15:45 [DEBUG] Received request
 POST /enroll
 Authorization: Basic VXNlcjFAbG90dGVyeWFzc29jaWF0aW9uLmNvbTpzZWNyZXQ=
-{"hosts":["adam-VirtualBox"],"certificate_request":"-----BEGIN CERTIFICATE REQUEST-----\nMIIBXDCCAQMCAQAwdDELMAkGA1UEBhMCVVMxFzAVBgNVBAgTDk5vcnRoIENhcm9s\naW5hMRQwEgYDVQQKEwtIeXBlcmxlZGdlcjEPMA0GA1UECxMGRmFicmljMSUwIwYD\nVQQDDBxVc2VyMUBsb3R0ZXJ5YXNzb2NpYXRpb24uY29tMFkwEwYHKoZIzj0CAQYI\nKoZIzj0DAQcDQgAEOijAHWamD4bo/Z5HjaI8LqxkxLUybLK1878mhpktC4q+Az+2\n/eBOa/rQ61w5z8NuItq+j45J6zktgsDPdfMGfqAtMCsGCSqGSIb3DQEJDjEeMBww\nGgYDVR0RBBMwEYIPYWRhbS1WaXJ0dWFsQm94MAoGCCqGSM49BAMCA0cAMEQCIA74\nSVmKGkZsYmbv0BFd653VQ+dVSHz4wFLF6cSXCF01AiB2idVjmmHE5rg0q4+wRobo\n3Amh5XkLFoKtrAwR7tdg6Q==\n-----END CERTIFICATE REQUEST-----\n","profile":"","crl_override":"","label":"","CAName":""}
-2018/05/08 10:18:31 [DEBUG] Directing traffic to default CA
-2018/05/08 10:18:31 [DEBUG] DB: Getting identity User1@lotteryassociation.com
-2018/05/08 10:18:31 [DEBUG] DB: Login user User1@lotteryassociation.com with max enrollments of -1 and state of 0
-2018/05/08 10:18:31 [DEBUG] Successfully incremented state for identity User1@lotteryassociation.com to 1
-2018/05/08 10:18:31 [DEBUG] DB: identity User1@lotteryassociation.com successfully logged in
-2018/05/08 10:18:31 [DEBUG] Identity/Pass was correct
-2018/05/08 10:18:31 [DEBUG] Received request for endpoint enroll
-2018/05/08 10:18:31 [DEBUG] Enrollment request: {SignRequest:{Hosts:[adam-VirtualBox] Request:-----BEGIN CERTIFICATE REQUEST-----
+{"hosts":["adam-VirtualBox"],"certificate_request":"-----BEGIN CERTIFICATE REQUEST-----\nMIIBXDCCAQMCAQAwdDELMAkGA1UEBhMCVVMxFzAVBgNVBAgTDk5vcnRoIENhcm9s\naW5hMRQwEgYDVQQKEwtIeXBlcmxlZGdlcjEPMA0GA1UECxMGRmFicmljMSUwIwYD\nVQQDDBxVc2VyMUBsb3R0ZXJ5YXNzb2NpYXRpb24uY29tMFkwEwYHKoZIzj0CAQYI\nKoZIzj0DAQcDQgAEmghB1g2HkE93UkTyj9SpiX72+FC9NNJ32eu5S6NHkkQ/kgO9\nqVelWnw6xHKLLjDEnrBsyH/AVUfeM23okvXd3qAtMCsGCSqGSIb3DQEJDjEeMBww\nGgYDVR0RBBMwEYIPYWRhbS1WaXJ0dWFsQm94MAoGCCqGSM49BAMCA0cAMEQCIDWb\nzRdD8yV1m1hbFLz/xWmjT+aPOFxJt5IHQjlMMMFCAiBb6U9lPArNDbwGBFlemQd6\nph9zRRG44qHF5bmgynYfFQ==\n-----END CERTIFICATE REQUEST-----\n","profile":"","crl_override":"","label":"","CAName":""}
+2018/05/09 10:15:45 [DEBUG] Directing traffic to default CA
+2018/05/09 10:15:45 [DEBUG] DB: Getting identity User1@lotteryassociation.com
+2018/05/09 10:15:45 [DEBUG] DB: Login user User1@lotteryassociation.com with max enrollments of -1 and state of 0
+2018/05/09 10:15:45 [DEBUG] Successfully incremented state for identity User1@lotteryassociation.com to 1
+2018/05/09 10:15:45 [DEBUG] DB: identity User1@lotteryassociation.com successfully logged in
+2018/05/09 10:15:45 [DEBUG] Identity/Pass was correct
+2018/05/09 10:15:45 [DEBUG] Received request for endpoint enroll
+2018/05/09 10:15:45 [DEBUG] Enrollment request: {SignRequest:{Hosts:[adam-VirtualBox] Request:-----BEGIN CERTIFICATE REQUEST-----
 MIIBXDCCAQMCAQAwdDELMAkGA1UEBhMCVVMxFzAVBgNVBAgTDk5vcnRoIENhcm9s
 aW5hMRQwEgYDVQQKEwtIeXBlcmxlZGdlcjEPMA0GA1UECxMGRmFicmljMSUwIwYD
 VQQDDBxVc2VyMUBsb3R0ZXJ5YXNzb2NpYXRpb24uY29tMFkwEwYHKoZIzj0CAQYI
-KoZIzj0DAQcDQgAEOijAHWamD4bo/Z5HjaI8LqxkxLUybLK1878mhpktC4q+Az+2
-/eBOa/rQ61w5z8NuItq+j45J6zktgsDPdfMGfqAtMCsGCSqGSIb3DQEJDjEeMBww
-GgYDVR0RBBMwEYIPYWRhbS1WaXJ0dWFsQm94MAoGCCqGSM49BAMCA0cAMEQCIA74
-SVmKGkZsYmbv0BFd653VQ+dVSHz4wFLF6cSXCF01AiB2idVjmmHE5rg0q4+wRobo
-3Amh5XkLFoKtrAwR7tdg6Q==
+KoZIzj0DAQcDQgAEmghB1g2HkE93UkTyj9SpiX72+FC9NNJ32eu5S6NHkkQ/kgO9
+qVelWnw6xHKLLjDEnrBsyH/AVUfeM23okvXd3qAtMCsGCSqGSIb3DQEJDjEeMBww
+GgYDVR0RBBMwEYIPYWRhbS1WaXJ0dWFsQm94MAoGCCqGSM49BAMCA0cAMEQCIDWb
+zRdD8yV1m1hbFLz/xWmjT+aPOFxJt5IHQjlMMMFCAiBb6U9lPArNDbwGBFlemQd6
+ph9zRRG44qHF5bmgynYfFQ==
 -----END CERTIFICATE REQUEST-----
  Subject:<nil> Profile: CRLOverride: Label: Serial:<nil> Extensions:[]} CAName:}
-2018/05/08 10:18:31 [DEBUG] csrAuthCheck: enrollment ID=User1@lotteryassociation.com, CommonName=User1@lotteryassociation.com, Subject=<nil>
-2018/05/08 10:18:31 [DEBUG] CSR authorization check passed
-2018/05/08 10:18:31 [DEBUG] Checking CSR fields to make sure that they do not exceed maximum character limits
-2018/05/08 10:18:31 [INFO] signed certificate with serial number 697501452689846447445495923364154542877812011449
-2018/05/08 10:18:31 [DEBUG] DB: Insert Certificate
-2018/05/08 10:18:31 [DEBUG] Saved serial number as hex 7a2d0bff51713802dde6ceb0cb667444ba9d31b9
-2018/05/08 10:18:31 [DEBUG] saved certificate with serial number 697501452689846447445495923364154542877812011449
-2018/05/08 10:18:31 [INFO] 127.0.0.1:55246 - "POST /enroll" 200
-2018/05/08 10:18:31 [DEBUG] Received request
+2018/05/09 10:15:45 [DEBUG] csrAuthCheck: enrollment ID=User1@lotteryassociation.com, CommonName=User1@lotteryassociation.com, Subject=<nil>
+2018/05/09 10:15:45 [DEBUG] CSR authorization check passed
+2018/05/09 10:15:45 [DEBUG] Checking CSR fields to make sure that they do not exceed maximum character limits
+2018/05/09 10:15:45 [INFO] signed certificate with serial number 632711115438830561405409223822447111451242327628
+2018/05/09 10:15:45 [DEBUG] DB: Insert Certificate
+2018/05/09 10:15:45 [DEBUG] Saved serial number as hex 6ed3bf66c0854a6bd37de6ef495b875ae3c6ee4c
+2018/05/09 10:15:46 [DEBUG] saved certificate with serial number 632711115438830561405409223822447111451242327628
+2018/05/09 10:15:46 [INFO] 127.0.0.1:40418 - "POST /enroll" 200
+2018/05/09 10:15:46 [DEBUG] Received request
 POST /enroll
 Authorization: Basic YWRtaW46YWRtaW5wdw==
-{"hosts":["orderer0.lotteryassociation.com","orderer0"],"certificate_request":"-----BEGIN CERTIFICATE REQUEST-----\nMIIBXzCCAQYCAQAwXTELMAkGA1UEBhMCVVMxFzAVBgNVBAgTDk5vcnRoIENhcm9s\naW5hMRQwEgYDVQQKEwtIeXBlcmxlZGdlcjEPMA0GA1UECxMGRmFicmljMQ4wDAYD\nVQQDEwVhZG1pbjBZMBMGByqGSM49AgEGCCqGSM49AwEHA0IABNUi0NOCY5Yu4Fo3\n6/ThkYd9w1nlPv3o+MMQOY+dpNSiuEGGJv+XmpFH6ddj2jLtOxTvq8dG2k6WQS9V\nC/VTh6ygRzBFBgkqhkiG9w0BCQ4xODA2MDQGA1UdEQQtMCuCH29yZGVyZXIwLmxv\ndHRlcnlhc3NvY2lhdGlvbi5jb22CCG9yZGVyZXIwMAoGCCqGSM49BAMCA0cAMEQC\nIAwr1E0UiWEXK0DnXK0BidfAl6Ma988gWFMgeYlB9XeVAiAgjq+LI+k0CN1e6LI3\nFFkYLg/Z0IhRDgIZTx2o2fKknA==\n-----END CERTIFICATE REQUEST-----\n","profile":"tls","crl_override":"","label":"","CAName":""}
-2018/05/08 10:18:31 [DEBUG] Directing traffic to default CA
-2018/05/08 10:18:31 [DEBUG] DB: Getting identity admin
-2018/05/08 10:18:31 [DEBUG] DB: Login user admin with max enrollments of -1 and state of 2
-2018/05/08 10:18:32 [DEBUG] Successfully incremented state for identity admin to 3
-2018/05/08 10:18:32 [DEBUG] DB: identity admin successfully logged in
-2018/05/08 10:18:32 [DEBUG] Identity/Pass was correct
-2018/05/08 10:18:32 [DEBUG] Received request for endpoint enroll
-2018/05/08 10:18:32 [DEBUG] Enrollment request: {SignRequest:{Hosts:[orderer0.lotteryassociation.com orderer0] Request:-----BEGIN CERTIFICATE REQUEST-----
-MIIBXzCCAQYCAQAwXTELMAkGA1UEBhMCVVMxFzAVBgNVBAgTDk5vcnRoIENhcm9s
-aW5hMRQwEgYDVQQKEwtIeXBlcmxlZGdlcjEPMA0GA1UECxMGRmFicmljMQ4wDAYD
-VQQDEwVhZG1pbjBZMBMGByqGSM49AgEGCCqGSM49AwEHA0IABNUi0NOCY5Yu4Fo3
-6/ThkYd9w1nlPv3o+MMQOY+dpNSiuEGGJv+XmpFH6ddj2jLtOxTvq8dG2k6WQS9V
-C/VTh6ygRzBFBgkqhkiG9w0BCQ4xODA2MDQGA1UdEQQtMCuCH29yZGVyZXIwLmxv
-dHRlcnlhc3NvY2lhdGlvbi5jb22CCG9yZGVyZXIwMAoGCCqGSM49BAMCA0cAMEQC
-IAwr1E0UiWEXK0DnXK0BidfAl6Ma988gWFMgeYlB9XeVAiAgjq+LI+k0CN1e6LI3
-FFkYLg/Z0IhRDgIZTx2o2fKknA==
------END CERTIFICATE REQUEST-----
- Subject:<nil> Profile:tls CRLOverride: Label: Serial:<nil> Extensions:[]} CAName:}
-2018/05/08 10:18:32 [DEBUG] csrAuthCheck: enrollment ID=admin, CommonName=admin, Subject=<nil>
-2018/05/08 10:18:32 [DEBUG] CSR authorization check passed
-2018/05/08 10:18:32 [DEBUG] Checking CSR fields to make sure that they do not exceed maximum character limits
-2018/05/08 10:18:32 [INFO] signed certificate with serial number 69016208637986077365223638533800412606355840423
-2018/05/08 10:18:32 [DEBUG] DB: Insert Certificate
-2018/05/08 10:18:32 [DEBUG] Saved serial number as hex c16cb386c3d7073dd1e8264bf5b1ad1f0899da7
-2018/05/08 10:18:32 [DEBUG] saved certificate with serial number 69016208637986077365223638533800412606355840423
-2018/05/08 10:18:32 [INFO] 127.0.0.1:55248 - "POST /enroll" 200
-2018/05/08 10:18:32 [DEBUG] Received request
-POST /register
-Authorization: LS0tLS1CRUdJTiBDRVJUSUZJQ0FURS0tLS0tCk1JSUNRekNDQWVtZ0F3SUJBZ0lVVmdQNnRtQkxQYjFKSU9mQ3BCQTZmcEI0a004d0NnWUlLb1pJemowRUF3SXcKYURFTE1Ba0dBMVVFQmhNQ1ZWTXhGekFWQmdOVkJBZ1REazV2Y25Sb0lFTmhjbTlzYVc1aE1SUXdFZ1lEVlFRSwpFd3RJZVhCbGNteGxaR2RsY2pFUE1BMEdBMVVFQ3hNR1JtRmljbWxqTVJrd0Z3WURWUVFERXhCbVlXSnlhV010ClkyRXRjMlZ5ZG1WeU1CNFhEVEU0TURVd09EQTRNVFF3TUZvWERURTVNRFV3T0RBNE1UUXdNRm93WFRFTE1Ba0cKQTFVRUJoTUNWVk14RnpBVkJnTlZCQWdURGs1dmNuUm9JRU5oY205c2FXNWhNUlF3RWdZRFZRUUtFd3RJZVhCbApjbXhsWkdkbGNqRVBNQTBHQTFVRUN4TUdSbUZpY21sak1RNHdEQVlEVlFRREV3VmhaRzFwYmpCWk1CTUdCeXFHClNNNDlBZ0VHQ0NxR1NNNDlBd0VIQTBJQUJNd2J0VkF2Ty9NMnFWM3A2azh3NnoxaXpDUDRjMVVibjJ1a2o0L2cKYjc2MVZWbzVOYWoyckcyN1J5ZmRmeXFXa1JFc1VQN2JDV250c2grbHF1a3NLcHFqZkRCNk1BNEdBMVVkRHdFQgovd1FFQXdJSGdEQU1CZ05WSFJNQkFmOEVBakFBTUIwR0ExVWREZ1FXQkJUUXF0a2pwbWlLcVRsYmFUclh0UytlCnhIRkRsVEFmQmdOVkhTTUVHREFXZ0JSRmozY2NaWlBUVUR5ZmNBdnAzV3VqTURnRFlEQWFCZ05WSFJFRUV6QVIKZ2c5aFpHRnRMVlpwY25SMVlXeENiM2d3Q2dZSUtvWkl6ajBFQXdJRFNBQXdSUUloQUsvTVNNcmdHcnVZZjlhTgpjVkpkN0ZqdTZIT2lOZlE3NTRHSDltNEphZlo0QWlBRDJpekpRUXBDN1NuaXhTNzVmQW5VQ1RaM3ZyYkY0M1FtCmxJd0MyRTFBOUE9PQotLS0tLUVORCBDRVJUSUZJQ0FURS0tLS0tCg==.MEUCIQD7c+tr9Q04dXfUNcbzFS1j+jc+659nQ794PGqKo3FpTAIgbKlbL9qetsrGFeygc7b4d5IOS2JKCD6E5KKpsOAy2dM=
-{"id":"orderer0.lotteryassociation.com","type":"user","secret":"secret","max_enrollments":-1,"affiliation":"org1","attrs":[{"name":"","value":""}]}
-2018/05/08 10:18:32 [DEBUG] Directing traffic to default CA
-2018/05/08 10:18:32 [DEBUG] Checking for revocation/expiration of certificate owned by 'admin'
-2018/05/08 10:18:32 [DEBUG] DB: Get certificate by serial (5603fab6604b3dbd4920e7c2a4103a7e907890cf) and aki (458f771c6593d3503c9f700be9dd6ba330380360)
-2018/05/08 10:18:32 [DEBUG] Successful authentication of 'admin'
-2018/05/08 10:18:32 [DEBUG] Register request received
-2018/05/08 10:18:32 [DEBUG] Received registration request from admin: &{RegistrationRequest:{Name:orderer0.lotteryassociation.com Type:user Secret:<<user-specified>> MaxEnrollments:-1 Affiliation:org1 Attributes:[{Name: Value:}] CAName:}}
-2018/05/08 10:18:32 [DEBUG] canRegister - Check to see if user admin can register
-2018/05/08 10:18:32 [DEBUG] DB: Getting identity admin
-2018/05/08 10:18:32 [DEBUG] Validate ID
-2018/05/08 10:18:32 [DEBUG] An affiliation is required for identity type user
-2018/05/08 10:18:32 [DEBUG] Validating affiliation: org1
-2018/05/08 10:18:32 [DEBUG] DB: Get affiliation org1
-2018/05/08 10:18:32 [DEBUG] Registering user id: orderer0.lotteryassociation.com
-2018/05/08 10:18:32 [DEBUG] Max enrollment value verification - User specified max enrollment: -1, CA max enrollment: -1
-2018/05/08 10:18:32 [DEBUG] DB: Getting identity orderer0.lotteryassociation.com
-2018/05/08 10:18:32 [DEBUG] DB: Add identity orderer0.lotteryassociation.com
-2018/05/08 10:18:32 [DEBUG] Successfully added identity orderer0.lotteryassociation.com to the database
-2018/05/08 10:18:32 [DEBUG] Registration completed - sending response 0xc42000e038
-2018/05/08 10:18:32 [INFO] 127.0.0.1:55250 - "POST /register" 200
-2018/05/08 10:18:32 [DEBUG] Received request
-POST /enroll
-Authorization: Basic b3JkZXJlcjAubG90dGVyeWFzc29jaWF0aW9uLmNvbTpzZWNyZXQ=
-{"hosts":["adam-VirtualBox"],"certificate_request":"-----BEGIN CERTIFICATE REQUEST-----\nMIIBXzCCAQYCAQAwdzELMAkGA1UEBhMCVVMxFzAVBgNVBAgTDk5vcnRoIENhcm9s\naW5hMRQwEgYDVQQKEwtIeXBlcmxlZGdlcjEPMA0GA1UECxMGRmFicmljMSgwJgYD\nVQQDEx9vcmRlcmVyMC5sb3R0ZXJ5YXNzb2NpYXRpb24uY29tMFkwEwYHKoZIzj0C\nAQYIKoZIzj0DAQcDQgAEtRDO50uyqN3OG4rYr/+SxlgVKUIlyjMeC/aBIvImAQXj\n3oPyyCe+dWOKCsXUhlVBq3br/kk0ewoNYRXq+YJCBqAtMCsGCSqGSIb3DQEJDjEe\nMBwwGgYDVR0RBBMwEYIPYWRhbS1WaXJ0dWFsQm94MAoGCCqGSM49BAMCA0cAMEQC\nIBTtnOTU87RvWZZlhIIVpQ0nTHFIoFJQI0dtYnvox5K2AiAqRJegBpS1/l0AH/YQ\nVSb+NoJ8g1V6r6SATSqK8QbE8w==\n-----END CERTIFICATE REQUEST-----\n","profile":"","crl_override":"","label":"","CAName":""}
-2018/05/08 10:18:32 [DEBUG] Directing traffic to default CA
-2018/05/08 10:18:32 [DEBUG] DB: Getting identity orderer0.lotteryassociation.com
-2018/05/08 10:18:32 [DEBUG] DB: Login user orderer0.lotteryassociation.com with max enrollments of -1 and state of 0
-2018/05/08 10:18:32 [DEBUG] Successfully incremented state for identity orderer0.lotteryassociation.com to 1
-2018/05/08 10:18:32 [DEBUG] DB: identity orderer0.lotteryassociation.com successfully logged in
-2018/05/08 10:18:32 [DEBUG] Identity/Pass was correct
-2018/05/08 10:18:32 [DEBUG] Received request for endpoint enroll
-2018/05/08 10:18:32 [DEBUG] Enrollment request: {SignRequest:{Hosts:[adam-VirtualBox] Request:-----BEGIN CERTIFICATE REQUEST-----
-MIIBXzCCAQYCAQAwdzELMAkGA1UEBhMCVVMxFzAVBgNVBAgTDk5vcnRoIENhcm9s
-aW5hMRQwEgYDVQQKEwtIeXBlcmxlZGdlcjEPMA0GA1UECxMGRmFicmljMSgwJgYD
-VQQDEx9vcmRlcmVyMC5sb3R0ZXJ5YXNzb2NpYXRpb24uY29tMFkwEwYHKoZIzj0C
-AQYIKoZIzj0DAQcDQgAEtRDO50uyqN3OG4rYr/+SxlgVKUIlyjMeC/aBIvImAQXj
-3oPyyCe+dWOKCsXUhlVBq3br/kk0ewoNYRXq+YJCBqAtMCsGCSqGSIb3DQEJDjEe
-MBwwGgYDVR0RBBMwEYIPYWRhbS1WaXJ0dWFsQm94MAoGCCqGSM49BAMCA0cAMEQC
-IBTtnOTU87RvWZZlhIIVpQ0nTHFIoFJQI0dtYnvox5K2AiAqRJegBpS1/l0AH/YQ
-VSb+NoJ8g1V6r6SATSqK8QbE8w==
------END CERTIFICATE REQUEST-----
- Subject:<nil> Profile: CRLOverride: Label: Serial:<nil> Extensions:[]} CAName:}
-2018/05/08 10:18:32 [DEBUG] csrAuthCheck: enrollment ID=orderer0.lotteryassociation.com, CommonName=orderer0.lotteryassociation.com, Subject=<nil>
-2018/05/08 10:18:32 [DEBUG] CSR authorization check passed
-2018/05/08 10:18:32 [DEBUG] Checking CSR fields to make sure that they do not exceed maximum character limits
-2018/05/08 10:18:32 [INFO] signed certificate with serial number 699230964679795840201840099153504831077957071974
-2018/05/08 10:18:32 [DEBUG] DB: Insert Certificate
-2018/05/08 10:18:32 [DEBUG] Saved serial number as hex 7a7a99d240b73f79edabe2abad2ebbbf63d97466
-2018/05/08 10:18:32 [DEBUG] saved certificate with serial number 699230964679795840201840099153504831077957071974
-2018/05/08 10:18:32 [INFO] 127.0.0.1:55252 - "POST /enroll" 200
-2018/05/08 10:18:32 [DEBUG] Received request
-POST /enroll
-Authorization: Basic YWRtaW46YWRtaW5wdw==
-{"hosts":["orderer1.lotteryassociation.com","orderer1"],"certificate_request":"-----BEGIN CERTIFICATE REQUEST-----\nMIIBYDCCAQYCAQAwXTELMAkGA1UEBhMCVVMxFzAVBgNVBAgTDk5vcnRoIENhcm9s\naW5hMRQwEgYDVQQKEwtIeXBlcmxlZGdlcjEPMA0GA1UECxMGRmFicmljMQ4wDAYD\nVQQDEwVhZG1pbjBZMBMGByqGSM49AgEGCCqGSM49AwEHA0IABGT7tnZ0+8Y99ZYi\n517DgrAnaV2rOSEDklBogJQPfZEsGdqc8944/xXj+D5+8Kzy1qLsZenlZIBkR9QW\ng6+IjsigRzBFBgkqhkiG9w0BCQ4xODA2MDQGA1UdEQQtMCuCH29yZGVyZXIxLmxv\ndHRlcnlhc3NvY2lhdGlvbi5jb22CCG9yZGVyZXIxMAoGCCqGSM49BAMCA0gAMEUC\nIQDKFMRQ8/jIox46uUyq+pBvukIeLIhizL3ZoSNCBTqNFQIgZLw82IDdXa+OUNEy\n8O9fkAW1nmRgvne4MedQ2fen1Ss=\n-----END CERTIFICATE REQUEST-----\n","profile":"tls","crl_override":"","label":"","CAName":""}
-2018/05/08 10:18:32 [DEBUG] Directing traffic to default CA
-2018/05/08 10:18:32 [DEBUG] DB: Getting identity admin
-2018/05/08 10:18:32 [DEBUG] DB: Login user admin with max enrollments of -1 and state of 3
-2018/05/08 10:18:32 [DEBUG] Successfully incremented state for identity admin to 4
-2018/05/08 10:18:32 [DEBUG] DB: identity admin successfully logged in
-2018/05/08 10:18:32 [DEBUG] Identity/Pass was correct
-2018/05/08 10:18:32 [DEBUG] Received request for endpoint enroll
-2018/05/08 10:18:32 [DEBUG] Enrollment request: {SignRequest:{Hosts:[orderer1.lotteryassociation.com orderer1] Request:-----BEGIN CERTIFICATE REQUEST-----
+{"hosts":["orderer0.lotteryassociation.com","orderer0"],"certificate_request":"-----BEGIN CERTIFICATE REQUEST-----\nMIIBYDCCAQYCAQAwXTELMAkGA1UEBhMCVVMxFzAVBgNVBAgTDk5vcnRoIENhcm9s\naW5hMRQwEgYDVQQKEwtIeXBlcmxlZGdlcjEPMA0GA1UECxMGRmFicmljMQ4wDAYD\nVQQDEwVhZG1pbjBZMBMGByqGSM49AgEGCCqGSM49AwEHA0IABMJW78FIdp0AZPpR\n5JG2RCC5EcdWvPKENH0CckRz9pTpqh1/kSoYd/n9hIac/cfWeDvc5hrw/lNY0Cvy\nvC27ie+gRzBFBgkqhkiG9w0BCQ4xODA2MDQGA1UdEQQtMCuCH29yZGVyZXIwLmxv\ndHRlcnlhc3NvY2lhdGlvbi5jb22CCG9yZGVyZXIwMAoGCCqGSM49BAMCA0gAMEUC\nIQCkU28ENOGxUQrKYS/5U6tYZ0Zo0uOngje0YfK6vEP0GwIgSqNu01Gc1v+BwI8k\n7sGYgpMOfSD01hAtgL0gkrif2xE=\n-----END CERTIFICATE REQUEST-----\n","profile":"tls","crl_override":"","label":"","CAName":""}
+2018/05/09 10:15:46 [DEBUG] Directing traffic to default CA
+2018/05/09 10:15:46 [DEBUG] DB: Getting identity admin
+2018/05/09 10:15:46 [DEBUG] DB: Login user admin with max enrollments of -1 and state of 2
+2018/05/09 10:15:46 [DEBUG] Successfully incremented state for identity admin to 3
+2018/05/09 10:15:46 [DEBUG] DB: identity admin successfully logged in
+2018/05/09 10:15:46 [DEBUG] Identity/Pass was correct
+2018/05/09 10:15:46 [DEBUG] Received request for endpoint enroll
+2018/05/09 10:15:46 [DEBUG] Enrollment request: {SignRequest:{Hosts:[orderer0.lotteryassociation.com orderer0] Request:-----BEGIN CERTIFICATE REQUEST-----
 MIIBYDCCAQYCAQAwXTELMAkGA1UEBhMCVVMxFzAVBgNVBAgTDk5vcnRoIENhcm9s
 aW5hMRQwEgYDVQQKEwtIeXBlcmxlZGdlcjEPMA0GA1UECxMGRmFicmljMQ4wDAYD
-VQQDEwVhZG1pbjBZMBMGByqGSM49AgEGCCqGSM49AwEHA0IABGT7tnZ0+8Y99ZYi
-517DgrAnaV2rOSEDklBogJQPfZEsGdqc8944/xXj+D5+8Kzy1qLsZenlZIBkR9QW
-g6+IjsigRzBFBgkqhkiG9w0BCQ4xODA2MDQGA1UdEQQtMCuCH29yZGVyZXIxLmxv
-dHRlcnlhc3NvY2lhdGlvbi5jb22CCG9yZGVyZXIxMAoGCCqGSM49BAMCA0gAMEUC
-IQDKFMRQ8/jIox46uUyq+pBvukIeLIhizL3ZoSNCBTqNFQIgZLw82IDdXa+OUNEy
-8O9fkAW1nmRgvne4MedQ2fen1Ss=
+VQQDEwVhZG1pbjBZMBMGByqGSM49AgEGCCqGSM49AwEHA0IABMJW78FIdp0AZPpR
+5JG2RCC5EcdWvPKENH0CckRz9pTpqh1/kSoYd/n9hIac/cfWeDvc5hrw/lNY0Cvy
+vC27ie+gRzBFBgkqhkiG9w0BCQ4xODA2MDQGA1UdEQQtMCuCH29yZGVyZXIwLmxv
+dHRlcnlhc3NvY2lhdGlvbi5jb22CCG9yZGVyZXIwMAoGCCqGSM49BAMCA0gAMEUC
+IQCkU28ENOGxUQrKYS/5U6tYZ0Zo0uOngje0YfK6vEP0GwIgSqNu01Gc1v+BwI8k
+7sGYgpMOfSD01hAtgL0gkrif2xE=
 -----END CERTIFICATE REQUEST-----
  Subject:<nil> Profile:tls CRLOverride: Label: Serial:<nil> Extensions:[]} CAName:}
-2018/05/08 10:18:32 [DEBUG] csrAuthCheck: enrollment ID=admin, CommonName=admin, Subject=<nil>
-2018/05/08 10:18:32 [DEBUG] CSR authorization check passed
-2018/05/08 10:18:32 [DEBUG] Checking CSR fields to make sure that they do not exceed maximum character limits
-2018/05/08 10:18:32 [INFO] signed certificate with serial number 476715230027779048720834272010524753476509828574
-2018/05/08 10:18:32 [DEBUG] DB: Insert Certificate
-2018/05/08 10:18:32 [DEBUG] Saved serial number as hex 5380a6759f1ae292b6f0e876a8bbc83fc7ed05de
-2018/05/08 10:18:32 [DEBUG] saved certificate with serial number 476715230027779048720834272010524753476509828574
-2018/05/08 10:18:32 [INFO] 127.0.0.1:55254 - "POST /enroll" 200
-2018/05/08 10:18:32 [DEBUG] Received request
+2018/05/09 10:15:46 [DEBUG] csrAuthCheck: enrollment ID=admin, CommonName=admin, Subject=<nil>
+2018/05/09 10:15:46 [DEBUG] CSR authorization check passed
+2018/05/09 10:15:46 [DEBUG] Checking CSR fields to make sure that they do not exceed maximum character limits
+2018/05/09 10:15:46 [INFO] signed certificate with serial number 383609168289643259652016446589184365382116750841
+2018/05/09 10:15:46 [DEBUG] DB: Insert Certificate
+2018/05/09 10:15:46 [DEBUG] Saved serial number as hex 4331a1499ecaa4ecadc63481b4dbfa8e41c6b5f9
+2018/05/09 10:15:46 [DEBUG] saved certificate with serial number 383609168289643259652016446589184365382116750841
+2018/05/09 10:15:46 [INFO] 127.0.0.1:40420 - "POST /enroll" 200
+2018/05/09 10:15:46 [DEBUG] Received request
 POST /register
-Authorization: LS0tLS1CRUdJTiBDRVJUSUZJQ0FURS0tLS0tCk1JSUNRekNDQWVtZ0F3SUJBZ0lVVmdQNnRtQkxQYjFKSU9mQ3BCQTZmcEI0a004d0NnWUlLb1pJemowRUF3SXcKYURFTE1Ba0dBMVVFQmhNQ1ZWTXhGekFWQmdOVkJBZ1REazV2Y25Sb0lFTmhjbTlzYVc1aE1SUXdFZ1lEVlFRSwpFd3RJZVhCbGNteGxaR2RsY2pFUE1BMEdBMVVFQ3hNR1JtRmljbWxqTVJrd0Z3WURWUVFERXhCbVlXSnlhV010ClkyRXRjMlZ5ZG1WeU1CNFhEVEU0TURVd09EQTRNVFF3TUZvWERURTVNRFV3T0RBNE1UUXdNRm93WFRFTE1Ba0cKQTFVRUJoTUNWVk14RnpBVkJnTlZCQWdURGs1dmNuUm9JRU5oY205c2FXNWhNUlF3RWdZRFZRUUtFd3RJZVhCbApjbXhsWkdkbGNqRVBNQTBHQTFVRUN4TUdSbUZpY21sak1RNHdEQVlEVlFRREV3VmhaRzFwYmpCWk1CTUdCeXFHClNNNDlBZ0VHQ0NxR1NNNDlBd0VIQTBJQUJNd2J0VkF2Ty9NMnFWM3A2azh3NnoxaXpDUDRjMVVibjJ1a2o0L2cKYjc2MVZWbzVOYWoyckcyN1J5ZmRmeXFXa1JFc1VQN2JDV250c2grbHF1a3NLcHFqZkRCNk1BNEdBMVVkRHdFQgovd1FFQXdJSGdEQU1CZ05WSFJNQkFmOEVBakFBTUIwR0ExVWREZ1FXQkJUUXF0a2pwbWlLcVRsYmFUclh0UytlCnhIRkRsVEFmQmdOVkhTTUVHREFXZ0JSRmozY2NaWlBUVUR5ZmNBdnAzV3VqTURnRFlEQWFCZ05WSFJFRUV6QVIKZ2c5aFpHRnRMVlpwY25SMVlXeENiM2d3Q2dZSUtvWkl6ajBFQXdJRFNBQXdSUUloQUsvTVNNcmdHcnVZZjlhTgpjVkpkN0ZqdTZIT2lOZlE3NTRHSDltNEphZlo0QWlBRDJpekpRUXBDN1NuaXhTNzVmQW5VQ1RaM3ZyYkY0M1FtCmxJd0MyRTFBOUE9PQotLS0tLUVORCBDRVJUSUZJQ0FURS0tLS0tCg==.MEUCIQDywY2JU98nFu5fz6heDg4ROGZSeJKSem5MB7bD7WyolAIgQCfEjOjOXVcXyaSISGqAPNTRwgYoHJo3ycZVmgnebUA=
+Authorization: LS0tLS1CRUdJTiBDRVJUSUZJQ0FURS0tLS0tCk1JSUNRekNDQWVtZ0F3SUJBZ0lVUWxudEZKTGhUMjhKaXg3ZEJKSzZOd2g3a0tjd0NnWUlLb1pJemowRUF3SXcKYURFTE1Ba0dBMVVFQmhNQ1ZWTXhGekFWQmdOVkJBZ1REazV2Y25Sb0lFTmhjbTlzYVc1aE1SUXdFZ1lEVlFRSwpFd3RJZVhCbGNteGxaR2RsY2pFUE1BMEdBMVVFQ3hNR1JtRmljbWxqTVJrd0Z3WURWUVFERXhCbVlXSnlhV010ClkyRXRjMlZ5ZG1WeU1CNFhEVEU0TURVd09UQTRNVEV3TUZvWERURTVNRFV3T1RBNE1URXdNRm93WFRFTE1Ba0cKQTFVRUJoTUNWVk14RnpBVkJnTlZCQWdURGs1dmNuUm9JRU5oY205c2FXNWhNUlF3RWdZRFZRUUtFd3RJZVhCbApjbXhsWkdkbGNqRVBNQTBHQTFVRUN4TUdSbUZpY21sak1RNHdEQVlEVlFRREV3VmhaRzFwYmpCWk1CTUdCeXFHClNNNDlBZ0VHQ0NxR1NNNDlBd0VIQTBJQUJOSGpFZ3dqY2dWNkl5Zm12ZFFReTlLbHgvR1Z1eWJmWnZxcnZSRzUKcW9MMjlyT0U1cXN5Vy9rOWcySG0yV2dXNHl5RmxPUUJEcVM3amxzdG1CbHl6NDZqZkRCNk1BNEdBMVVkRHdFQgovd1FFQXdJSGdEQU1CZ05WSFJNQkFmOEVBakFBTUIwR0ExVWREZ1FXQkJUK0Z4d2VnemNXQTRiRVk1bjg4QUg2Cm1UdXNXVEFmQmdOVkhTTUVHREFXZ0JRZVREOVFnQ29hSmRWVGxTamlZSkJlZDhxSy9EQWFCZ05WSFJFRUV6QVIKZ2c5aFpHRnRMVlpwY25SMVlXeENiM2d3Q2dZSUtvWkl6ajBFQXdJRFNBQXdSUUloQU5wMTNyUWlwakNQZCtDcwo1dHhhZzhKd2dZN3pIZTJPYXRpRnFTM2ZwZGxGQWlBV0lCKzU5SDR4bGkvZUpodExWTE1UWmE0eDdLbjFQbkdCCkZxYjFodmh0aHc9PQotLS0tLUVORCBDRVJUSUZJQ0FURS0tLS0tCg==.MEUCIQC0hyHArnivvujcKVyUyHIvUTgd3O/OTaR2wz6E93rSvwIgcQ0HBB7a7McAwSplPkutIt7ULuIf3l2QQG3VAl8Vu6c=
+{"id":"orderer0.lotteryassociation.com","type":"user","secret":"secret","max_enrollments":-1,"affiliation":"org1","attrs":[{"name":"","value":""}]}
+2018/05/09 10:15:46 [DEBUG] Directing traffic to default CA
+2018/05/09 10:15:46 [DEBUG] Checking for revocation/expiration of certificate owned by 'admin'
+2018/05/09 10:15:46 [DEBUG] DB: Get certificate by serial (4259ed1492e14f6f098b1edd0492ba37087b90a7) and aki (1e4c3f50802a1a25d5539528e260905e77ca8afc)
+2018/05/09 10:15:46 [DEBUG] Successful authentication of 'admin'
+2018/05/09 10:15:46 [DEBUG] Register request received
+2018/05/09 10:15:46 [DEBUG] Received registration request from admin: &{RegistrationRequest:{Name:orderer0.lotteryassociation.com Type:user Secret:<<user-specified>> MaxEnrollments:-1 Affiliation:org1 Attributes:[{Name: Value:}] CAName:}}
+2018/05/09 10:15:46 [DEBUG] canRegister - Check to see if user admin can register
+2018/05/09 10:15:46 [DEBUG] DB: Getting identity admin
+2018/05/09 10:15:46 [DEBUG] Validate ID
+2018/05/09 10:15:46 [DEBUG] An affiliation is required for identity type user
+2018/05/09 10:15:46 [DEBUG] Validating affiliation: org1
+2018/05/09 10:15:46 [DEBUG] DB: Get affiliation org1
+2018/05/09 10:15:46 [DEBUG] Registering user id: orderer0.lotteryassociation.com
+2018/05/09 10:15:46 [DEBUG] Max enrollment value verification - User specified max enrollment: -1, CA max enrollment: -1
+2018/05/09 10:15:46 [DEBUG] DB: Getting identity orderer0.lotteryassociation.com
+2018/05/09 10:15:46 [DEBUG] DB: Add identity orderer0.lotteryassociation.com
+2018/05/09 10:15:46 [DEBUG] Successfully added identity orderer0.lotteryassociation.com to the database
+2018/05/09 10:15:46 [DEBUG] Registration completed - sending response 0xc42000e908
+2018/05/09 10:15:46 [INFO] 127.0.0.1:40422 - "POST /register" 200
+2018/05/09 10:15:46 [DEBUG] Received request
+POST /enroll
+Authorization: Basic b3JkZXJlcjAubG90dGVyeWFzc29jaWF0aW9uLmNvbTpzZWNyZXQ=
+{"hosts":["adam-VirtualBox"],"certificate_request":"-----BEGIN CERTIFICATE REQUEST-----\nMIIBYDCCAQYCAQAwdzELMAkGA1UEBhMCVVMxFzAVBgNVBAgTDk5vcnRoIENhcm9s\naW5hMRQwEgYDVQQKEwtIeXBlcmxlZGdlcjEPMA0GA1UECxMGRmFicmljMSgwJgYD\nVQQDEx9vcmRlcmVyMC5sb3R0ZXJ5YXNzb2NpYXRpb24uY29tMFkwEwYHKoZIzj0C\nAQYIKoZIzj0DAQcDQgAEETmUef261JUG04aUMb5n8rMQ/GWBCB/RhUKNo1QYpf4z\nQHkeRuEOQLrzMmm0jYxfS6nxlbdQttENYFSNNYXX0aAtMCsGCSqGSIb3DQEJDjEe\nMBwwGgYDVR0RBBMwEYIPYWRhbS1WaXJ0dWFsQm94MAoGCCqGSM49BAMCA0gAMEUC\nIQDjcEPW8M2U86rQJKA3CGl5ym+YihzFpa9rqDlXMO87bAIgaHrjhTxSoWy4uAdE\n7XM6D6wh1uqSxMh42wPbBORLwsM=\n-----END CERTIFICATE REQUEST-----\n","profile":"","crl_override":"","label":"","CAName":""}
+2018/05/09 10:15:46 [DEBUG] Directing traffic to default CA
+2018/05/09 10:15:46 [DEBUG] DB: Getting identity orderer0.lotteryassociation.com
+2018/05/09 10:15:46 [DEBUG] DB: Login user orderer0.lotteryassociation.com with max enrollments of -1 and state of 0
+2018/05/09 10:15:46 [DEBUG] Successfully incremented state for identity orderer0.lotteryassociation.com to 1
+2018/05/09 10:15:46 [DEBUG] DB: identity orderer0.lotteryassociation.com successfully logged in
+2018/05/09 10:15:46 [DEBUG] Identity/Pass was correct
+2018/05/09 10:15:46 [DEBUG] Received request for endpoint enroll
+2018/05/09 10:15:46 [DEBUG] Enrollment request: {SignRequest:{Hosts:[adam-VirtualBox] Request:-----BEGIN CERTIFICATE REQUEST-----
+MIIBYDCCAQYCAQAwdzELMAkGA1UEBhMCVVMxFzAVBgNVBAgTDk5vcnRoIENhcm9s
+aW5hMRQwEgYDVQQKEwtIeXBlcmxlZGdlcjEPMA0GA1UECxMGRmFicmljMSgwJgYD
+VQQDEx9vcmRlcmVyMC5sb3R0ZXJ5YXNzb2NpYXRpb24uY29tMFkwEwYHKoZIzj0C
+AQYIKoZIzj0DAQcDQgAEETmUef261JUG04aUMb5n8rMQ/GWBCB/RhUKNo1QYpf4z
+QHkeRuEOQLrzMmm0jYxfS6nxlbdQttENYFSNNYXX0aAtMCsGCSqGSIb3DQEJDjEe
+MBwwGgYDVR0RBBMwEYIPYWRhbS1WaXJ0dWFsQm94MAoGCCqGSM49BAMCA0gAMEUC
+IQDjcEPW8M2U86rQJKA3CGl5ym+YihzFpa9rqDlXMO87bAIgaHrjhTxSoWy4uAdE
+7XM6D6wh1uqSxMh42wPbBORLwsM=
+-----END CERTIFICATE REQUEST-----
+ Subject:<nil> Profile: CRLOverride: Label: Serial:<nil> Extensions:[]} CAName:}
+2018/05/09 10:15:46 [DEBUG] csrAuthCheck: enrollment ID=orderer0.lotteryassociation.com, CommonName=orderer0.lotteryassociation.com, Subject=<nil>
+2018/05/09 10:15:46 [DEBUG] CSR authorization check passed
+2018/05/09 10:15:46 [DEBUG] Checking CSR fields to make sure that they do not exceed maximum character limits
+2018/05/09 10:15:46 [INFO] signed certificate with serial number 122118309561337690109335523038965637305039659889
+2018/05/09 10:15:46 [DEBUG] DB: Insert Certificate
+2018/05/09 10:15:46 [DEBUG] Saved serial number as hex 1563f9718da508f4cdc8011defd6f4eae5792371
+2018/05/09 10:15:46 [DEBUG] saved certificate with serial number 122118309561337690109335523038965637305039659889
+2018/05/09 10:15:46 [INFO] 127.0.0.1:40424 - "POST /enroll" 200
+2018/05/09 10:15:47 [DEBUG] Received request
+POST /enroll
+Authorization: Basic YWRtaW46YWRtaW5wdw==
+{"hosts":["orderer1.lotteryassociation.com","orderer1"],"certificate_request":"-----BEGIN CERTIFICATE REQUEST-----\nMIIBXzCCAQYCAQAwXTELMAkGA1UEBhMCVVMxFzAVBgNVBAgTDk5vcnRoIENhcm9s\naW5hMRQwEgYDVQQKEwtIeXBlcmxlZGdlcjEPMA0GA1UECxMGRmFicmljMQ4wDAYD\nVQQDEwVhZG1pbjBZMBMGByqGSM49AgEGCCqGSM49AwEHA0IABDgRk6Vz/5/rKNPa\n0szHBr+x/HKPHQwid/+IpAPGm9wcbqKpmh9lEp4ThE1Zg6E2F9bVOyKrX0uFhU7t\nFQ8GKgugRzBFBgkqhkiG9w0BCQ4xODA2MDQGA1UdEQQtMCuCH29yZGVyZXIxLmxv\ndHRlcnlhc3NvY2lhdGlvbi5jb22CCG9yZGVyZXIxMAoGCCqGSM49BAMCA0cAMEQC\nIAzu/Q8H4Fx30F9KprfKS+vxOqxDXeXfi09UzoapgJdMAiAlRpe0iMzFxaqZPkW2\nVbrDPuVLVeDX1xO2ter4p6Viyg==\n-----END CERTIFICATE REQUEST-----\n","profile":"tls","crl_override":"","label":"","CAName":""}
+2018/05/09 10:15:47 [DEBUG] Directing traffic to default CA
+2018/05/09 10:15:47 [DEBUG] DB: Getting identity admin
+2018/05/09 10:15:47 [DEBUG] DB: Login user admin with max enrollments of -1 and state of 3
+2018/05/09 10:15:47 [DEBUG] Successfully incremented state for identity admin to 4
+2018/05/09 10:15:47 [DEBUG] DB: identity admin successfully logged in
+2018/05/09 10:15:47 [DEBUG] Identity/Pass was correct
+2018/05/09 10:15:47 [DEBUG] Received request for endpoint enroll
+2018/05/09 10:15:47 [DEBUG] Enrollment request: {SignRequest:{Hosts:[orderer1.lotteryassociation.com orderer1] Request:-----BEGIN CERTIFICATE REQUEST-----
+MIIBXzCCAQYCAQAwXTELMAkGA1UEBhMCVVMxFzAVBgNVBAgTDk5vcnRoIENhcm9s
+aW5hMRQwEgYDVQQKEwtIeXBlcmxlZGdlcjEPMA0GA1UECxMGRmFicmljMQ4wDAYD
+VQQDEwVhZG1pbjBZMBMGByqGSM49AgEGCCqGSM49AwEHA0IABDgRk6Vz/5/rKNPa
+0szHBr+x/HKPHQwid/+IpAPGm9wcbqKpmh9lEp4ThE1Zg6E2F9bVOyKrX0uFhU7t
+FQ8GKgugRzBFBgkqhkiG9w0BCQ4xODA2MDQGA1UdEQQtMCuCH29yZGVyZXIxLmxv
+dHRlcnlhc3NvY2lhdGlvbi5jb22CCG9yZGVyZXIxMAoGCCqGSM49BAMCA0cAMEQC
+IAzu/Q8H4Fx30F9KprfKS+vxOqxDXeXfi09UzoapgJdMAiAlRpe0iMzFxaqZPkW2
+VbrDPuVLVeDX1xO2ter4p6Viyg==
+-----END CERTIFICATE REQUEST-----
+ Subject:<nil> Profile:tls CRLOverride: Label: Serial:<nil> Extensions:[]} CAName:}
+2018/05/09 10:15:47 [DEBUG] csrAuthCheck: enrollment ID=admin, CommonName=admin, Subject=<nil>
+2018/05/09 10:15:47 [DEBUG] CSR authorization check passed
+2018/05/09 10:15:47 [DEBUG] Checking CSR fields to make sure that they do not exceed maximum character limits
+2018/05/09 10:15:47 [INFO] signed certificate with serial number 376631161322191915638898476601130637511418969652
+2018/05/09 10:15:47 [DEBUG] DB: Insert Certificate
+2018/05/09 10:15:47 [DEBUG] Saved serial number as hex 41f8b9b231d6e9c17bc6a3e7575d547f7bbbfe34
+2018/05/09 10:15:47 [DEBUG] saved certificate with serial number 376631161322191915638898476601130637511418969652
+2018/05/09 10:15:47 [INFO] 127.0.0.1:40426 - "POST /enroll" 200
+2018/05/09 10:15:47 [DEBUG] Received request
+POST /register
+Authorization: LS0tLS1CRUdJTiBDRVJUSUZJQ0FURS0tLS0tCk1JSUNRekNDQWVtZ0F3SUJBZ0lVUWxudEZKTGhUMjhKaXg3ZEJKSzZOd2g3a0tjd0NnWUlLb1pJemowRUF3SXcKYURFTE1Ba0dBMVVFQmhNQ1ZWTXhGekFWQmdOVkJBZ1REazV2Y25Sb0lFTmhjbTlzYVc1aE1SUXdFZ1lEVlFRSwpFd3RJZVhCbGNteGxaR2RsY2pFUE1BMEdBMVVFQ3hNR1JtRmljbWxqTVJrd0Z3WURWUVFERXhCbVlXSnlhV010ClkyRXRjMlZ5ZG1WeU1CNFhEVEU0TURVd09UQTRNVEV3TUZvWERURTVNRFV3T1RBNE1URXdNRm93WFRFTE1Ba0cKQTFVRUJoTUNWVk14RnpBVkJnTlZCQWdURGs1dmNuUm9JRU5oY205c2FXNWhNUlF3RWdZRFZRUUtFd3RJZVhCbApjbXhsWkdkbGNqRVBNQTBHQTFVRUN4TUdSbUZpY21sak1RNHdEQVlEVlFRREV3VmhaRzFwYmpCWk1CTUdCeXFHClNNNDlBZ0VHQ0NxR1NNNDlBd0VIQTBJQUJOSGpFZ3dqY2dWNkl5Zm12ZFFReTlLbHgvR1Z1eWJmWnZxcnZSRzUKcW9MMjlyT0U1cXN5Vy9rOWcySG0yV2dXNHl5RmxPUUJEcVM3amxzdG1CbHl6NDZqZkRCNk1BNEdBMVVkRHdFQgovd1FFQXdJSGdEQU1CZ05WSFJNQkFmOEVBakFBTUIwR0ExVWREZ1FXQkJUK0Z4d2VnemNXQTRiRVk1bjg4QUg2Cm1UdXNXVEFmQmdOVkhTTUVHREFXZ0JRZVREOVFnQ29hSmRWVGxTamlZSkJlZDhxSy9EQWFCZ05WSFJFRUV6QVIKZ2c5aFpHRnRMVlpwY25SMVlXeENiM2d3Q2dZSUtvWkl6ajBFQXdJRFNBQXdSUUloQU5wMTNyUWlwakNQZCtDcwo1dHhhZzhKd2dZN3pIZTJPYXRpRnFTM2ZwZGxGQWlBV0lCKzU5SDR4bGkvZUpodExWTE1UWmE0eDdLbjFQbkdCCkZxYjFodmh0aHc9PQotLS0tLUVORCBDRVJUSUZJQ0FURS0tLS0tCg==.MEUCIQCkhEBtaHXvK7iosCqSULUxP6WM1TgWcdTH0/sxh/ykpgIgHY8e786WC1HQbFV5zVOEw2PvMw2KF6h3NZns25ea/3I=
 {"id":"orderer1.lotteryassociation.com","type":"user","secret":"secret","max_enrollments":-1,"affiliation":"org1","attrs":[{"name":"","value":""}]}
-2018/05/08 10:18:32 [DEBUG] Directing traffic to default CA
-2018/05/08 10:18:32 [DEBUG] Checking for revocation/expiration of certificate owned by 'admin'
-2018/05/08 10:18:32 [DEBUG] DB: Get certificate by serial (5603fab6604b3dbd4920e7c2a4103a7e907890cf) and aki (458f771c6593d3503c9f700be9dd6ba330380360)
-2018/05/08 10:18:32 [DEBUG] Successful authentication of 'admin'
-2018/05/08 10:18:32 [DEBUG] Register request received
-2018/05/08 10:18:32 [DEBUG] Received registration request from admin: &{RegistrationRequest:{Name:orderer1.lotteryassociation.com Type:user Secret:<<user-specified>> MaxEnrollments:-1 Affiliation:org1 Attributes:[{Name: Value:}] CAName:}}
-2018/05/08 10:18:32 [DEBUG] canRegister - Check to see if user admin can register
-2018/05/08 10:18:32 [DEBUG] DB: Getting identity admin
-2018/05/08 10:18:32 [DEBUG] Validate ID
-2018/05/08 10:18:32 [DEBUG] An affiliation is required for identity type user
-2018/05/08 10:18:32 [DEBUG] Validating affiliation: org1
-2018/05/08 10:18:32 [DEBUG] DB: Get affiliation org1
-2018/05/08 10:18:32 [DEBUG] Registering user id: orderer1.lotteryassociation.com
-2018/05/08 10:18:32 [DEBUG] Max enrollment value verification - User specified max enrollment: -1, CA max enrollment: -1
-2018/05/08 10:18:32 [DEBUG] DB: Getting identity orderer1.lotteryassociation.com
-2018/05/08 10:18:32 [DEBUG] DB: Add identity orderer1.lotteryassociation.com
-2018/05/08 10:18:32 [DEBUG] Successfully added identity orderer1.lotteryassociation.com to the database
-2018/05/08 10:18:32 [DEBUG] Registration completed - sending response 0xc42000e1c0
-2018/05/08 10:18:32 [INFO] 127.0.0.1:55256 - "POST /register" 200
-2018/05/08 10:18:33 [DEBUG] Received request
+2018/05/09 10:15:47 [DEBUG] Directing traffic to default CA
+2018/05/09 10:15:47 [DEBUG] Checking for revocation/expiration of certificate owned by 'admin'
+2018/05/09 10:15:47 [DEBUG] DB: Get certificate by serial (4259ed1492e14f6f098b1edd0492ba37087b90a7) and aki (1e4c3f50802a1a25d5539528e260905e77ca8afc)
+2018/05/09 10:15:47 [DEBUG] Successful authentication of 'admin'
+2018/05/09 10:15:47 [DEBUG] Register request received
+2018/05/09 10:15:47 [DEBUG] Received registration request from admin: &{RegistrationRequest:{Name:orderer1.lotteryassociation.com Type:user Secret:<<user-specified>> MaxEnrollments:-1 Affiliation:org1 Attributes:[{Name: Value:}] CAName:}}
+2018/05/09 10:15:47 [DEBUG] canRegister - Check to see if user admin can register
+2018/05/09 10:15:47 [DEBUG] DB: Getting identity admin
+2018/05/09 10:15:47 [DEBUG] Validate ID
+2018/05/09 10:15:47 [DEBUG] An affiliation is required for identity type user
+2018/05/09 10:15:47 [DEBUG] Validating affiliation: org1
+2018/05/09 10:15:47 [DEBUG] DB: Get affiliation org1
+2018/05/09 10:15:47 [DEBUG] Registering user id: orderer1.lotteryassociation.com
+2018/05/09 10:15:47 [DEBUG] Max enrollment value verification - User specified max enrollment: -1, CA max enrollment: -1
+2018/05/09 10:15:47 [DEBUG] DB: Getting identity orderer1.lotteryassociation.com
+2018/05/09 10:15:47 [DEBUG] DB: Add identity orderer1.lotteryassociation.com
+2018/05/09 10:15:47 [DEBUG] Successfully added identity orderer1.lotteryassociation.com to the database
+2018/05/09 10:15:47 [DEBUG] Registration completed - sending response 0xc42000e198
+2018/05/09 10:15:47 [INFO] 127.0.0.1:40428 - "POST /register" 200
+2018/05/09 10:15:47 [DEBUG] Received request
 POST /enroll
 Authorization: Basic b3JkZXJlcjEubG90dGVyeWFzc29jaWF0aW9uLmNvbTpzZWNyZXQ=
-{"hosts":["adam-VirtualBox"],"certificate_request":"-----BEGIN CERTIFICATE REQUEST-----\nMIIBXzCCAQYCAQAwdzELMAkGA1UEBhMCVVMxFzAVBgNVBAgTDk5vcnRoIENhcm9s\naW5hMRQwEgYDVQQKEwtIeXBlcmxlZGdlcjEPMA0GA1UECxMGRmFicmljMSgwJgYD\nVQQDEx9vcmRlcmVyMS5sb3R0ZXJ5YXNzb2NpYXRpb24uY29tMFkwEwYHKoZIzj0C\nAQYIKoZIzj0DAQcDQgAE4iHs1TtcgAos5RZJNLGvmo4WcQwA8ZcTUQ/El1k4UhHo\n1/CSnBR/tBOkH85rin2uNrlzX4e+kjHqwdV5mk/XwaAtMCsGCSqGSIb3DQEJDjEe\nMBwwGgYDVR0RBBMwEYIPYWRhbS1WaXJ0dWFsQm94MAoGCCqGSM49BAMCA0cAMEQC\nIFt4IKVsx465U83ogiomPN8h1Tn3tg+TLxFSb1h1TfluAiAps4maSZCKESzCc5pq\n3C1v8LpyI8UJw5YfjbstFfQpHg==\n-----END CERTIFICATE REQUEST-----\n","profile":"","crl_override":"","label":"","CAName":""}
-2018/05/08 10:18:33 [DEBUG] Directing traffic to default CA
-2018/05/08 10:18:33 [DEBUG] DB: Getting identity orderer1.lotteryassociation.com
-2018/05/08 10:18:33 [DEBUG] DB: Login user orderer1.lotteryassociation.com with max enrollments of -1 and state of 0
-2018/05/08 10:18:33 [DEBUG] Successfully incremented state for identity orderer1.lotteryassociation.com to 1
-2018/05/08 10:18:33 [DEBUG] DB: identity orderer1.lotteryassociation.com successfully logged in
-2018/05/08 10:18:33 [DEBUG] Identity/Pass was correct
-2018/05/08 10:18:33 [DEBUG] Received request for endpoint enroll
-2018/05/08 10:18:33 [DEBUG] Enrollment request: {SignRequest:{Hosts:[adam-VirtualBox] Request:-----BEGIN CERTIFICATE REQUEST-----
+{"hosts":["adam-VirtualBox"],"certificate_request":"-----BEGIN CERTIFICATE REQUEST-----\nMIIBXzCCAQYCAQAwdzELMAkGA1UEBhMCVVMxFzAVBgNVBAgTDk5vcnRoIENhcm9s\naW5hMRQwEgYDVQQKEwtIeXBlcmxlZGdlcjEPMA0GA1UECxMGRmFicmljMSgwJgYD\nVQQDEx9vcmRlcmVyMS5sb3R0ZXJ5YXNzb2NpYXRpb24uY29tMFkwEwYHKoZIzj0C\nAQYIKoZIzj0DAQcDQgAEUbzqq64XENNSaSE0FCWOWEvOODcQNIRxvtH5/SHeAkjC\nIgxRPFvbquuWGL4i/O9zpcgNVA+kuu9n7qXqqwZQY6AtMCsGCSqGSIb3DQEJDjEe\nMBwwGgYDVR0RBBMwEYIPYWRhbS1WaXJ0dWFsQm94MAoGCCqGSM49BAMCA0cAMEQC\nIEi+rRxrIhconIm/5GfrVLbhHFVSgwlPB/LGYu+9bqc2AiA9SFTOpIl4q0uwdt/b\nJU56Ci+ucggQbJfU4kBvQUQZpg==\n-----END CERTIFICATE REQUEST-----\n","profile":"","crl_override":"","label":"","CAName":""}
+2018/05/09 10:15:47 [DEBUG] Directing traffic to default CA
+2018/05/09 10:15:47 [DEBUG] DB: Getting identity orderer1.lotteryassociation.com
+2018/05/09 10:15:47 [DEBUG] DB: Login user orderer1.lotteryassociation.com with max enrollments of -1 and state of 0
+2018/05/09 10:15:47 [DEBUG] Successfully incremented state for identity orderer1.lotteryassociation.com to 1
+2018/05/09 10:15:47 [DEBUG] DB: identity orderer1.lotteryassociation.com successfully logged in
+2018/05/09 10:15:47 [DEBUG] Identity/Pass was correct
+2018/05/09 10:15:47 [DEBUG] Received request for endpoint enroll
+2018/05/09 10:15:47 [DEBUG] Enrollment request: {SignRequest:{Hosts:[adam-VirtualBox] Request:-----BEGIN CERTIFICATE REQUEST-----
 MIIBXzCCAQYCAQAwdzELMAkGA1UEBhMCVVMxFzAVBgNVBAgTDk5vcnRoIENhcm9s
 aW5hMRQwEgYDVQQKEwtIeXBlcmxlZGdlcjEPMA0GA1UECxMGRmFicmljMSgwJgYD
 VQQDEx9vcmRlcmVyMS5sb3R0ZXJ5YXNzb2NpYXRpb24uY29tMFkwEwYHKoZIzj0C
-AQYIKoZIzj0DAQcDQgAE4iHs1TtcgAos5RZJNLGvmo4WcQwA8ZcTUQ/El1k4UhHo
-1/CSnBR/tBOkH85rin2uNrlzX4e+kjHqwdV5mk/XwaAtMCsGCSqGSIb3DQEJDjEe
+AQYIKoZIzj0DAQcDQgAEUbzqq64XENNSaSE0FCWOWEvOODcQNIRxvtH5/SHeAkjC
+IgxRPFvbquuWGL4i/O9zpcgNVA+kuu9n7qXqqwZQY6AtMCsGCSqGSIb3DQEJDjEe
 MBwwGgYDVR0RBBMwEYIPYWRhbS1WaXJ0dWFsQm94MAoGCCqGSM49BAMCA0cAMEQC
-IFt4IKVsx465U83ogiomPN8h1Tn3tg+TLxFSb1h1TfluAiAps4maSZCKESzCc5pq
-3C1v8LpyI8UJw5YfjbstFfQpHg==
+IEi+rRxrIhconIm/5GfrVLbhHFVSgwlPB/LGYu+9bqc2AiA9SFTOpIl4q0uwdt/b
+JU56Ci+ucggQbJfU4kBvQUQZpg==
 -----END CERTIFICATE REQUEST-----
  Subject:<nil> Profile: CRLOverride: Label: Serial:<nil> Extensions:[]} CAName:}
-2018/05/08 10:18:33 [DEBUG] csrAuthCheck: enrollment ID=orderer1.lotteryassociation.com, CommonName=orderer1.lotteryassociation.com, Subject=<nil>
-2018/05/08 10:18:33 [DEBUG] CSR authorization check passed
-2018/05/08 10:18:33 [DEBUG] Checking CSR fields to make sure that they do not exceed maximum character limits
-2018/05/08 10:18:33 [INFO] signed certificate with serial number 569464920978691867353981140957391288199604250309
-2018/05/08 10:18:33 [DEBUG] DB: Insert Certificate
-2018/05/08 10:18:33 [DEBUG] Saved serial number as hex 63bfb0b201395e6804b563c6949e2a647b8aa6c5
-2018/05/08 10:18:33 [DEBUG] saved certificate with serial number 569464920978691867353981140957391288199604250309
-2018/05/08 10:18:33 [INFO] 127.0.0.1:55258 - "POST /enroll" 200
-2018/05/08 10:18:33 [DEBUG] Received request
+2018/05/09 10:15:47 [DEBUG] csrAuthCheck: enrollment ID=orderer1.lotteryassociation.com, CommonName=orderer1.lotteryassociation.com, Subject=<nil>
+2018/05/09 10:15:47 [DEBUG] CSR authorization check passed
+2018/05/09 10:15:47 [DEBUG] Checking CSR fields to make sure that they do not exceed maximum character limits
+2018/05/09 10:15:47 [INFO] signed certificate with serial number 511255050420693412922239091933432277416912444311
+2018/05/09 10:15:47 [DEBUG] DB: Insert Certificate
+2018/05/09 10:15:47 [DEBUG] Saved serial number as hex 598d7826ff49f3e2a2af55bb85473fa248d15b97
+2018/05/09 10:15:47 [DEBUG] saved certificate with serial number 511255050420693412922239091933432277416912444311
+2018/05/09 10:15:47 [INFO] 127.0.0.1:40430 - "POST /enroll" 200
+2018/05/09 10:15:47 [DEBUG] Received request
 POST /enroll
 Authorization: Basic YWRtaW46YWRtaW5wdw==
-{"hosts":["orderer2.lotteryassociation.com","orderer2"],"certificate_request":"-----BEGIN CERTIFICATE REQUEST-----\nMIIBYDCCAQYCAQAwXTELMAkGA1UEBhMCVVMxFzAVBgNVBAgTDk5vcnRoIENhcm9s\naW5hMRQwEgYDVQQKEwtIeXBlcmxlZGdlcjEPMA0GA1UECxMGRmFicmljMQ4wDAYD\nVQQDEwVhZG1pbjBZMBMGByqGSM49AgEGCCqGSM49AwEHA0IABBKJmQJqhAo7sMAC\nJxU8LgM/k5pI40MLsBK5+6sVmIlBIf/3cnrqxIGVw3Qpf79cqiAZeUBxPXk7PYWR\nMD2/7wGgRzBFBgkqhkiG9w0BCQ4xODA2MDQGA1UdEQQtMCuCH29yZGVyZXIyLmxv\ndHRlcnlhc3NvY2lhdGlvbi5jb22CCG9yZGVyZXIyMAoGCCqGSM49BAMCA0gAMEUC\nIQDHXQbldR0ckH9Vx9g2IR0LI6xppzB5PL9jgBRwRFZUuQIgcStu7FjzVbnrdOgl\nWTPoT0KUuFOGAY6bGqhrqoDCu5I=\n-----END CERTIFICATE REQUEST-----\n","profile":"tls","crl_override":"","label":"","CAName":""}
-2018/05/08 10:18:33 [DEBUG] Directing traffic to default CA
-2018/05/08 10:18:33 [DEBUG] DB: Getting identity admin
-2018/05/08 10:18:33 [DEBUG] DB: Login user admin with max enrollments of -1 and state of 4
-2018/05/08 10:18:33 [DEBUG] Successfully incremented state for identity admin to 5
-2018/05/08 10:18:33 [DEBUG] DB: identity admin successfully logged in
-2018/05/08 10:18:33 [DEBUG] Identity/Pass was correct
-2018/05/08 10:18:33 [DEBUG] Received request for endpoint enroll
-2018/05/08 10:18:33 [DEBUG] Enrollment request: {SignRequest:{Hosts:[orderer2.lotteryassociation.com orderer2] Request:-----BEGIN CERTIFICATE REQUEST-----
+{"hosts":["orderer2.lotteryassociation.com","orderer2"],"certificate_request":"-----BEGIN CERTIFICATE REQUEST-----\nMIIBYDCCAQYCAQAwXTELMAkGA1UEBhMCVVMxFzAVBgNVBAgTDk5vcnRoIENhcm9s\naW5hMRQwEgYDVQQKEwtIeXBlcmxlZGdlcjEPMA0GA1UECxMGRmFicmljMQ4wDAYD\nVQQDEwVhZG1pbjBZMBMGByqGSM49AgEGCCqGSM49AwEHA0IABNvNWC+fro5TYlkI\nbEa1QcGWvqXY7x0IbssX6I0lXPp/P73EeU27lX0XJWEBTUM+EhSwG2iJYahbje5S\nysd55ECgRzBFBgkqhkiG9w0BCQ4xODA2MDQGA1UdEQQtMCuCH29yZGVyZXIyLmxv\ndHRlcnlhc3NvY2lhdGlvbi5jb22CCG9yZGVyZXIyMAoGCCqGSM49BAMCA0gAMEUC\nIQD9bWvBHwC7IUyy2jCTijiSeVGjGHtRJh082vJCN/84UQIgaf9MmsURhB9/AaNQ\nsRqNdst4tF1Cn0bLLud2sxfn1I0=\n-----END CERTIFICATE REQUEST-----\n","profile":"tls","crl_override":"","label":"","CAName":""}
+2018/05/09 10:15:47 [DEBUG] Directing traffic to default CA
+2018/05/09 10:15:47 [DEBUG] DB: Getting identity admin
+2018/05/09 10:15:47 [DEBUG] DB: Login user admin with max enrollments of -1 and state of 4
+2018/05/09 10:15:47 [DEBUG] Successfully incremented state for identity admin to 5
+2018/05/09 10:15:47 [DEBUG] DB: identity admin successfully logged in
+2018/05/09 10:15:47 [DEBUG] Identity/Pass was correct
+2018/05/09 10:15:47 [DEBUG] Received request for endpoint enroll
+2018/05/09 10:15:47 [DEBUG] Enrollment request: {SignRequest:{Hosts:[orderer2.lotteryassociation.com orderer2] Request:-----BEGIN CERTIFICATE REQUEST-----
 MIIBYDCCAQYCAQAwXTELMAkGA1UEBhMCVVMxFzAVBgNVBAgTDk5vcnRoIENhcm9s
 aW5hMRQwEgYDVQQKEwtIeXBlcmxlZGdlcjEPMA0GA1UECxMGRmFicmljMQ4wDAYD
-VQQDEwVhZG1pbjBZMBMGByqGSM49AgEGCCqGSM49AwEHA0IABBKJmQJqhAo7sMAC
-JxU8LgM/k5pI40MLsBK5+6sVmIlBIf/3cnrqxIGVw3Qpf79cqiAZeUBxPXk7PYWR
-MD2/7wGgRzBFBgkqhkiG9w0BCQ4xODA2MDQGA1UdEQQtMCuCH29yZGVyZXIyLmxv
+VQQDEwVhZG1pbjBZMBMGByqGSM49AgEGCCqGSM49AwEHA0IABNvNWC+fro5TYlkI
+bEa1QcGWvqXY7x0IbssX6I0lXPp/P73EeU27lX0XJWEBTUM+EhSwG2iJYahbje5S
+ysd55ECgRzBFBgkqhkiG9w0BCQ4xODA2MDQGA1UdEQQtMCuCH29yZGVyZXIyLmxv
 dHRlcnlhc3NvY2lhdGlvbi5jb22CCG9yZGVyZXIyMAoGCCqGSM49BAMCA0gAMEUC
-IQDHXQbldR0ckH9Vx9g2IR0LI6xppzB5PL9jgBRwRFZUuQIgcStu7FjzVbnrdOgl
-WTPoT0KUuFOGAY6bGqhrqoDCu5I=
+IQD9bWvBHwC7IUyy2jCTijiSeVGjGHtRJh082vJCN/84UQIgaf9MmsURhB9/AaNQ
+sRqNdst4tF1Cn0bLLud2sxfn1I0=
 -----END CERTIFICATE REQUEST-----
  Subject:<nil> Profile:tls CRLOverride: Label: Serial:<nil> Extensions:[]} CAName:}
-2018/05/08 10:18:33 [DEBUG] csrAuthCheck: enrollment ID=admin, CommonName=admin, Subject=<nil>
-2018/05/08 10:18:33 [DEBUG] CSR authorization check passed
-2018/05/08 10:18:33 [DEBUG] Checking CSR fields to make sure that they do not exceed maximum character limits
-2018/05/08 10:18:33 [INFO] signed certificate with serial number 659001404467763006312185838469651026773229397404
-2018/05/08 10:18:33 [DEBUG] DB: Insert Certificate
-2018/05/08 10:18:33 [DEBUG] Saved serial number as hex 736ea51e56eae9aa7bd97af0225832aea88f659c
-2018/05/08 10:18:33 [DEBUG] saved certificate with serial number 659001404467763006312185838469651026773229397404
-2018/05/08 10:18:33 [INFO] 127.0.0.1:55260 - "POST /enroll" 200
-2018/05/08 10:18:33 [DEBUG] Received request
+2018/05/09 10:15:47 [DEBUG] csrAuthCheck: enrollment ID=admin, CommonName=admin, Subject=<nil>
+2018/05/09 10:15:47 [DEBUG] CSR authorization check passed
+2018/05/09 10:15:47 [DEBUG] Checking CSR fields to make sure that they do not exceed maximum character limits
+2018/05/09 10:15:47 [INFO] signed certificate with serial number 583906695317334474756163530406731494079575574285
+2018/05/09 10:15:47 [DEBUG] DB: Insert Certificate
+2018/05/09 10:15:47 [DEBUG] Saved serial number as hex 6647482261d0dd8de307722acefbdcd0e33f470d
+2018/05/09 10:15:47 [DEBUG] saved certificate with serial number 583906695317334474756163530406731494079575574285
+2018/05/09 10:15:47 [INFO] 127.0.0.1:40432 - "POST /enroll" 200
+2018/05/09 10:15:48 [DEBUG] Received request
 POST /register
-Authorization: LS0tLS1CRUdJTiBDRVJUSUZJQ0FURS0tLS0tCk1JSUNRekNDQWVtZ0F3SUJBZ0lVVmdQNnRtQkxQYjFKSU9mQ3BCQTZmcEI0a004d0NnWUlLb1pJemowRUF3SXcKYURFTE1Ba0dBMVVFQmhNQ1ZWTXhGekFWQmdOVkJBZ1REazV2Y25Sb0lFTmhjbTlzYVc1aE1SUXdFZ1lEVlFRSwpFd3RJZVhCbGNteGxaR2RsY2pFUE1BMEdBMVVFQ3hNR1JtRmljbWxqTVJrd0Z3WURWUVFERXhCbVlXSnlhV010ClkyRXRjMlZ5ZG1WeU1CNFhEVEU0TURVd09EQTRNVFF3TUZvWERURTVNRFV3T0RBNE1UUXdNRm93WFRFTE1Ba0cKQTFVRUJoTUNWVk14RnpBVkJnTlZCQWdURGs1dmNuUm9JRU5oY205c2FXNWhNUlF3RWdZRFZRUUtFd3RJZVhCbApjbXhsWkdkbGNqRVBNQTBHQTFVRUN4TUdSbUZpY21sak1RNHdEQVlEVlFRREV3VmhaRzFwYmpCWk1CTUdCeXFHClNNNDlBZ0VHQ0NxR1NNNDlBd0VIQTBJQUJNd2J0VkF2Ty9NMnFWM3A2azh3NnoxaXpDUDRjMVVibjJ1a2o0L2cKYjc2MVZWbzVOYWoyckcyN1J5ZmRmeXFXa1JFc1VQN2JDV250c2grbHF1a3NLcHFqZkRCNk1BNEdBMVVkRHdFQgovd1FFQXdJSGdEQU1CZ05WSFJNQkFmOEVBakFBTUIwR0ExVWREZ1FXQkJUUXF0a2pwbWlLcVRsYmFUclh0UytlCnhIRkRsVEFmQmdOVkhTTUVHREFXZ0JSRmozY2NaWlBUVUR5ZmNBdnAzV3VqTURnRFlEQWFCZ05WSFJFRUV6QVIKZ2c5aFpHRnRMVlpwY25SMVlXeENiM2d3Q2dZSUtvWkl6ajBFQXdJRFNBQXdSUUloQUsvTVNNcmdHcnVZZjlhTgpjVkpkN0ZqdTZIT2lOZlE3NTRHSDltNEphZlo0QWlBRDJpekpRUXBDN1NuaXhTNzVmQW5VQ1RaM3ZyYkY0M1FtCmxJd0MyRTFBOUE9PQotLS0tLUVORCBDRVJUSUZJQ0FURS0tLS0tCg==.MEUCIQDGufl3OIKSH4Gk+wVIcnErXdHCzEqdOoEwF2nWCRelzgIgI16QpHoJGX1mEJZXVNSByx/UN4b7Q1fTHChaFLtGZeg=
+Authorization: LS0tLS1CRUdJTiBDRVJUSUZJQ0FURS0tLS0tCk1JSUNRekNDQWVtZ0F3SUJBZ0lVUWxudEZKTGhUMjhKaXg3ZEJKSzZOd2g3a0tjd0NnWUlLb1pJemowRUF3SXcKYURFTE1Ba0dBMVVFQmhNQ1ZWTXhGekFWQmdOVkJBZ1REazV2Y25Sb0lFTmhjbTlzYVc1aE1SUXdFZ1lEVlFRSwpFd3RJZVhCbGNteGxaR2RsY2pFUE1BMEdBMVVFQ3hNR1JtRmljbWxqTVJrd0Z3WURWUVFERXhCbVlXSnlhV010ClkyRXRjMlZ5ZG1WeU1CNFhEVEU0TURVd09UQTRNVEV3TUZvWERURTVNRFV3T1RBNE1URXdNRm93WFRFTE1Ba0cKQTFVRUJoTUNWVk14RnpBVkJnTlZCQWdURGs1dmNuUm9JRU5oY205c2FXNWhNUlF3RWdZRFZRUUtFd3RJZVhCbApjbXhsWkdkbGNqRVBNQTBHQTFVRUN4TUdSbUZpY21sak1RNHdEQVlEVlFRREV3VmhaRzFwYmpCWk1CTUdCeXFHClNNNDlBZ0VHQ0NxR1NNNDlBd0VIQTBJQUJOSGpFZ3dqY2dWNkl5Zm12ZFFReTlLbHgvR1Z1eWJmWnZxcnZSRzUKcW9MMjlyT0U1cXN5Vy9rOWcySG0yV2dXNHl5RmxPUUJEcVM3amxzdG1CbHl6NDZqZkRCNk1BNEdBMVVkRHdFQgovd1FFQXdJSGdEQU1CZ05WSFJNQkFmOEVBakFBTUIwR0ExVWREZ1FXQkJUK0Z4d2VnemNXQTRiRVk1bjg4QUg2Cm1UdXNXVEFmQmdOVkhTTUVHREFXZ0JRZVREOVFnQ29hSmRWVGxTamlZSkJlZDhxSy9EQWFCZ05WSFJFRUV6QVIKZ2c5aFpHRnRMVlpwY25SMVlXeENiM2d3Q2dZSUtvWkl6ajBFQXdJRFNBQXdSUUloQU5wMTNyUWlwakNQZCtDcwo1dHhhZzhKd2dZN3pIZTJPYXRpRnFTM2ZwZGxGQWlBV0lCKzU5SDR4bGkvZUpodExWTE1UWmE0eDdLbjFQbkdCCkZxYjFodmh0aHc9PQotLS0tLUVORCBDRVJUSUZJQ0FURS0tLS0tCg==.MEQCICxrGPDTXjn7d/CGZsIBREaL06Vy01duSzqTwtaXju5vAiAEIc/adG9UuKX6VjiJx0Ck8KpxBlRd9cV7js/hYKBBUg==
 {"id":"orderer2.lotteryassociation.com","type":"user","secret":"secret","max_enrollments":-1,"affiliation":"org1","attrs":[{"name":"","value":""}]}
-2018/05/08 10:18:33 [DEBUG] Directing traffic to default CA
-2018/05/08 10:18:33 [DEBUG] Checking for revocation/expiration of certificate owned by 'admin'
-2018/05/08 10:18:33 [DEBUG] DB: Get certificate by serial (5603fab6604b3dbd4920e7c2a4103a7e907890cf) and aki (458f771c6593d3503c9f700be9dd6ba330380360)
-2018/05/08 10:18:33 [DEBUG] Successful authentication of 'admin'
-2018/05/08 10:18:33 [DEBUG] Register request received
-2018/05/08 10:18:33 [DEBUG] Received registration request from admin: &{RegistrationRequest:{Name:orderer2.lotteryassociation.com Type:user Secret:<<user-specified>> MaxEnrollments:-1 Affiliation:org1 Attributes:[{Name: Value:}] CAName:}}
-2018/05/08 10:18:33 [DEBUG] canRegister - Check to see if user admin can register
-2018/05/08 10:18:33 [DEBUG] DB: Getting identity admin
-2018/05/08 10:18:33 [DEBUG] Validate ID
-2018/05/08 10:18:33 [DEBUG] An affiliation is required for identity type user
-2018/05/08 10:18:33 [DEBUG] Validating affiliation: org1
-2018/05/08 10:18:33 [DEBUG] DB: Get affiliation org1
-2018/05/08 10:18:33 [DEBUG] Registering user id: orderer2.lotteryassociation.com
-2018/05/08 10:18:33 [DEBUG] Max enrollment value verification - User specified max enrollment: -1, CA max enrollment: -1
-2018/05/08 10:18:33 [DEBUG] DB: Getting identity orderer2.lotteryassociation.com
-2018/05/08 10:18:33 [DEBUG] DB: Add identity orderer2.lotteryassociation.com
-2018/05/08 10:18:33 [DEBUG] Successfully added identity orderer2.lotteryassociation.com to the database
-2018/05/08 10:18:33 [DEBUG] Registration completed - sending response 0xc42000e330
-2018/05/08 10:18:33 [INFO] 127.0.0.1:55262 - "POST /register" 200
-2018/05/08 10:18:33 [DEBUG] Received request
+2018/05/09 10:15:48 [DEBUG] Directing traffic to default CA
+2018/05/09 10:15:48 [DEBUG] Checking for revocation/expiration of certificate owned by 'admin'
+2018/05/09 10:15:48 [DEBUG] DB: Get certificate by serial (4259ed1492e14f6f098b1edd0492ba37087b90a7) and aki (1e4c3f50802a1a25d5539528e260905e77ca8afc)
+2018/05/09 10:15:48 [DEBUG] Successful authentication of 'admin'
+2018/05/09 10:15:48 [DEBUG] Register request received
+2018/05/09 10:15:48 [DEBUG] Received registration request from admin: &{RegistrationRequest:{Name:orderer2.lotteryassociation.com Type:user Secret:<<user-specified>> MaxEnrollments:-1 Affiliation:org1 Attributes:[{Name: Value:}] CAName:}}
+2018/05/09 10:15:48 [DEBUG] canRegister - Check to see if user admin can register
+2018/05/09 10:15:48 [DEBUG] DB: Getting identity admin
+2018/05/09 10:15:48 [DEBUG] Validate ID
+2018/05/09 10:15:48 [DEBUG] An affiliation is required for identity type user
+2018/05/09 10:15:48 [DEBUG] Validating affiliation: org1
+2018/05/09 10:15:48 [DEBUG] DB: Get affiliation org1
+2018/05/09 10:15:48 [DEBUG] Registering user id: orderer2.lotteryassociation.com
+2018/05/09 10:15:48 [DEBUG] Max enrollment value verification - User specified max enrollment: -1, CA max enrollment: -1
+2018/05/09 10:15:48 [DEBUG] DB: Getting identity orderer2.lotteryassociation.com
+2018/05/09 10:15:48 [DEBUG] DB: Add identity orderer2.lotteryassociation.com
+2018/05/09 10:15:48 [DEBUG] Successfully added identity orderer2.lotteryassociation.com to the database
+2018/05/09 10:15:48 [DEBUG] Registration completed - sending response 0xc42000e2f8
+2018/05/09 10:15:48 [INFO] 127.0.0.1:40434 - "POST /register" 200
+2018/05/09 10:15:48 [DEBUG] Received request
 POST /enroll
 Authorization: Basic b3JkZXJlcjIubG90dGVyeWFzc29jaWF0aW9uLmNvbTpzZWNyZXQ=
-{"hosts":["adam-VirtualBox"],"certificate_request":"-----BEGIN CERTIFICATE REQUEST-----\nMIIBYDCCAQYCAQAwdzELMAkGA1UEBhMCVVMxFzAVBgNVBAgTDk5vcnRoIENhcm9s\naW5hMRQwEgYDVQQKEwtIeXBlcmxlZGdlcjEPMA0GA1UECxMGRmFicmljMSgwJgYD\nVQQDEx9vcmRlcmVyMi5sb3R0ZXJ5YXNzb2NpYXRpb24uY29tMFkwEwYHKoZIzj0C\nAQYIKoZIzj0DAQcDQgAEVzTbYBNp118vwZYbmR9iuzxX7qzRxbKmBjzw5NcaPg7O\ncWK+oYrYFldoW7ALcL4rSvRkQN1H2Opb/BeJK/bVsKAtMCsGCSqGSIb3DQEJDjEe\nMBwwGgYDVR0RBBMwEYIPYWRhbS1WaXJ0dWFsQm94MAoGCCqGSM49BAMCA0gAMEUC\nIQCsnyAY9lSYAFIaajS9PuJdd8DJsg9iK9H2ufQucd4aVgIgO30lfHWa3H68gQxL\n5ZIWHe9DKpEqFqyw321ozios8XY=\n-----END CERTIFICATE REQUEST-----\n","profile":"","crl_override":"","label":"","CAName":""}
-2018/05/08 10:18:33 [DEBUG] Directing traffic to default CA
-2018/05/08 10:18:33 [DEBUG] DB: Getting identity orderer2.lotteryassociation.com
-2018/05/08 10:18:33 [DEBUG] DB: Login user orderer2.lotteryassociation.com with max enrollments of -1 and state of 0
-2018/05/08 10:18:33 [DEBUG] Successfully incremented state for identity orderer2.lotteryassociation.com to 1
-2018/05/08 10:18:33 [DEBUG] DB: identity orderer2.lotteryassociation.com successfully logged in
-2018/05/08 10:18:33 [DEBUG] Identity/Pass was correct
-2018/05/08 10:18:33 [DEBUG] Received request for endpoint enroll
-2018/05/08 10:18:33 [DEBUG] Enrollment request: {SignRequest:{Hosts:[adam-VirtualBox] Request:-----BEGIN CERTIFICATE REQUEST-----
+{"hosts":["adam-VirtualBox"],"certificate_request":"-----BEGIN CERTIFICATE REQUEST-----\nMIIBYDCCAQYCAQAwdzELMAkGA1UEBhMCVVMxFzAVBgNVBAgTDk5vcnRoIENhcm9s\naW5hMRQwEgYDVQQKEwtIeXBlcmxlZGdlcjEPMA0GA1UECxMGRmFicmljMSgwJgYD\nVQQDEx9vcmRlcmVyMi5sb3R0ZXJ5YXNzb2NpYXRpb24uY29tMFkwEwYHKoZIzj0C\nAQYIKoZIzj0DAQcDQgAElT4y/wF7BYtDD9Roa960IZQLBPAlBWBiaAbEFOnN2WxZ\nUXW8vbWAACjuO8/WaEMMZnPIcgrCav6RJPl1+xhqJaAtMCsGCSqGSIb3DQEJDjEe\nMBwwGgYDVR0RBBMwEYIPYWRhbS1WaXJ0dWFsQm94MAoGCCqGSM49BAMCA0gAMEUC\nIQDGd86UNC52fcWgd6SE9h+A+7YTXRuO9blfu7DDGH29TAIgINazWwNocVTPOnxR\n34/Va1+H0XNcEdOvGtIx9afnze0=\n-----END CERTIFICATE REQUEST-----\n","profile":"","crl_override":"","label":"","CAName":""}
+2018/05/09 10:15:48 [DEBUG] Directing traffic to default CA
+2018/05/09 10:15:48 [DEBUG] DB: Getting identity orderer2.lotteryassociation.com
+2018/05/09 10:15:48 [DEBUG] DB: Login user orderer2.lotteryassociation.com with max enrollments of -1 and state of 0
+2018/05/09 10:15:48 [DEBUG] Successfully incremented state for identity orderer2.lotteryassociation.com to 1
+2018/05/09 10:15:48 [DEBUG] DB: identity orderer2.lotteryassociation.com successfully logged in
+2018/05/09 10:15:48 [DEBUG] Identity/Pass was correct
+2018/05/09 10:15:48 [DEBUG] Received request for endpoint enroll
+2018/05/09 10:15:48 [DEBUG] Enrollment request: {SignRequest:{Hosts:[adam-VirtualBox] Request:-----BEGIN CERTIFICATE REQUEST-----
 MIIBYDCCAQYCAQAwdzELMAkGA1UEBhMCVVMxFzAVBgNVBAgTDk5vcnRoIENhcm9s
 aW5hMRQwEgYDVQQKEwtIeXBlcmxlZGdlcjEPMA0GA1UECxMGRmFicmljMSgwJgYD
 VQQDEx9vcmRlcmVyMi5sb3R0ZXJ5YXNzb2NpYXRpb24uY29tMFkwEwYHKoZIzj0C
-AQYIKoZIzj0DAQcDQgAEVzTbYBNp118vwZYbmR9iuzxX7qzRxbKmBjzw5NcaPg7O
-cWK+oYrYFldoW7ALcL4rSvRkQN1H2Opb/BeJK/bVsKAtMCsGCSqGSIb3DQEJDjEe
+AQYIKoZIzj0DAQcDQgAElT4y/wF7BYtDD9Roa960IZQLBPAlBWBiaAbEFOnN2WxZ
+UXW8vbWAACjuO8/WaEMMZnPIcgrCav6RJPl1+xhqJaAtMCsGCSqGSIb3DQEJDjEe
 MBwwGgYDVR0RBBMwEYIPYWRhbS1WaXJ0dWFsQm94MAoGCCqGSM49BAMCA0gAMEUC
-IQCsnyAY9lSYAFIaajS9PuJdd8DJsg9iK9H2ufQucd4aVgIgO30lfHWa3H68gQxL
-5ZIWHe9DKpEqFqyw321ozios8XY=
+IQDGd86UNC52fcWgd6SE9h+A+7YTXRuO9blfu7DDGH29TAIgINazWwNocVTPOnxR
+34/Va1+H0XNcEdOvGtIx9afnze0=
 -----END CERTIFICATE REQUEST-----
  Subject:<nil> Profile: CRLOverride: Label: Serial:<nil> Extensions:[]} CAName:}
-2018/05/08 10:18:33 [DEBUG] csrAuthCheck: enrollment ID=orderer2.lotteryassociation.com, CommonName=orderer2.lotteryassociation.com, Subject=<nil>
-2018/05/08 10:18:33 [DEBUG] CSR authorization check passed
-2018/05/08 10:18:33 [DEBUG] Checking CSR fields to make sure that they do not exceed maximum character limits
-2018/05/08 10:18:33 [INFO] signed certificate with serial number 408651361834629387811709314302255643110971276485
-2018/05/08 10:18:33 [DEBUG] DB: Insert Certificate
-2018/05/08 10:18:33 [DEBUG] Saved serial number as hex 47948f923b2998e78c62dcf3aba8071337effcc5
-2018/05/08 10:18:33 [DEBUG] saved certificate with serial number 408651361834629387811709314302255643110971276485
-2018/05/08 10:18:33 [INFO] 127.0.0.1:55264 - "POST /enroll" 200
-2018/05/08 10:18:33 [DEBUG] Received request
+2018/05/09 10:15:48 [DEBUG] csrAuthCheck: enrollment ID=orderer2.lotteryassociation.com, CommonName=orderer2.lotteryassociation.com, Subject=<nil>
+2018/05/09 10:15:48 [DEBUG] CSR authorization check passed
+2018/05/09 10:15:48 [DEBUG] Checking CSR fields to make sure that they do not exceed maximum character limits
+2018/05/09 10:15:48 [INFO] signed certificate with serial number 701891124331023259644301099356647268583641058618
+2018/05/09 10:15:48 [DEBUG] DB: Insert Certificate
+2018/05/09 10:15:48 [DEBUG] Saved serial number as hex 7af1e2f4dbca350c519882fa0bd67ee57e220d3a
+2018/05/09 10:15:48 [DEBUG] saved certificate with serial number 701891124331023259644301099356647268583641058618
+2018/05/09 10:15:48 [INFO] 127.0.0.1:40436 - "POST /enroll" 200
+2018/05/09 10:15:48 [DEBUG] Received request
 POST /cainfo
 Authorization: Basic YWRtaW46YWRtaW5wdw==
 {}
-2018/05/08 10:18:33 [DEBUG] Directing traffic to default CA
-2018/05/08 10:18:33 [DEBUG] Received request for server info
-2018/05/08 10:18:33 [INFO] 127.0.0.1:55266 - "POST /cainfo" 200
+2018/05/09 10:15:48 [DEBUG] Directing traffic to default CA
+2018/05/09 10:15:48 [DEBUG] Received request for server info
+2018/05/09 10:15:48 [INFO] 127.0.0.1:40438 - "POST /cainfo" 200
