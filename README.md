@@ -1,25 +1,26 @@
-## hlf-lottery
+## hlf-lottery - Hyperledger Fabric Lottery Test Project
 
-### Hyperledger Fabric Lottery Test Project
-
-## Start/stop the network
+### Start/stop the network
 ```
 docker-compose -f docker-compose-hlf-lottery.yaml up
 docker-compose -f docker-compose-hlf-lottery.yaml down
 ```
 
-## Initialize the network
+### Initialize the network
 ```
 ./network.sh
 ```
 
-## Feed/query wagers
+### Feed/query wagers
 ```
 ./createWagers.sh
 ./queryWagers.sh
+./queryWagersDetails.sh
+./cancelWagers.sh
+./queryWagersDetails.sh
 ```
 
-## Start GUI Client
+### Start GUI Client
 ```
 cd lot1Client$ 
 node lot1Client.js
@@ -27,7 +28,7 @@ node lot1Client.js
 Lot1bClient:  http://localhost:4000/
 ```
 
-## See the Ledger contents per peer
+### See the Ledger contents per peer
 ```
 Lot1a:        http://localhost:5984/_utils/#_all_dbs
 Lot1b:        http://localhost:5985/_utils/#_all_dbs

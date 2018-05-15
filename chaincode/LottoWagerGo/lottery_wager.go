@@ -13,14 +13,15 @@ type LotteryWager struct {
 
 // Define our struct to store Wager in Blockchain, start fields upper case for JSON
 type Wager struct {
-    Serial string  // This one will be our key
+    Serial string  // This one will be our Serial Number
     Lottery string
     Boards string
-    Status string   // this will contain its status on the exchange
+    Status string   // this will contain wager status
 }
 
 // Implement Init
 func (c *LotteryWager) Init(stub shim.ChaincodeStubInterface) pb.Response { 
+    // nothing really here for now
     return shim.Success(nil) 
 }
 
@@ -30,20 +31,25 @@ func (c *LotteryWager) Invoke(stub shim.ChaincodeStubInterface) pb.Response {
     function, args := stub.GetFunctionAndParameters() // get function name and args
 
     switch function {
-    case "createWager":
-        // Wager is created
-        return c.createWager(stub, args)
-    case "cancelWager":
-        // cancel Wager
-        return c.updateStatus(stub, args, "cancelled")
-    case "queryWagers":
-        // Store query
-        return c.queryWagers(stub, args)
-    case "queryWagerDetails":
-        // Get details of a computer
-        return c.queryWagerDetails(stub, args)
-    default:
-        return shim.Error("Available functions: cancelWager, queryWagers, queryWagerDetails")
+
+        case "createWager":
+            // Wager is created
+            return c.createWager(stub, args)
+
+        case "cancelWager":
+            // cancel Wager
+            return c.updateStatus(stub, args, "cancelled")
+
+        case "queryWagers":
+            // Wagers query
+            return c.queryWagers(stub, args)
+
+        case "queryWagerDetails":
+            // Get details for a wager
+            return c.queryWagerDetails(stub, args)
+
+        default:
+            return shim.Error("Available functions: createWager, cancelWager, queryWagers, queryWagerDetails")
     }
 }
 
@@ -70,11 +76,13 @@ func (c *LotteryWager) createWager(stub shim.ChaincodeStubInterface, args []stri
     if err != nil {
         return shim.Error(err.Error())
     }
+
     return shim.Success(nil)
 }
 
-// updateStatus handles sell and buy
+// updateStatus handles all updates
 func (c *LotteryWager) updateStatus(stub shim.ChaincodeStubInterface, args []string, status string) pb.Response {
+
     if len(args) != 1 {
         return shim.Error("This function needs the serial number as argument")
     }
@@ -100,6 +108,7 @@ func (c *LotteryWager) updateStatus(stub shim.ChaincodeStubInterface, args []str
     if err != nil {
         return shim.Error(err.Error())
     }
+    
     return shim.Success(nil)
 }
 
