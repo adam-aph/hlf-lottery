@@ -8,7 +8,7 @@ docker-compose -f docker-compose-hlf-lottery.yaml down
 
 ### Initialize the network
 ```
-./network.sh
+./initNetwork.sh
 ```
 
 ### Feed/query wagers

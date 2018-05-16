@@ -2,7 +2,7 @@ version: '2'
 
 services:
 
-  orderer:
+  orderer:    
     #image: hyperledger/fabric-orderer:x86_64-1.0.0
     image: hyperledger/fabric-orderer:x86_64-1.1.0-preview
     environment:
@@ -13,6 +13,8 @@ services:
       - ORDERER_GENERAL_LOCALMSPDIR=/var/hyperledger/orderer/msp
       - ORDERER_KAFKA_RETRY_SHORTINTERVAL=1s
       - ORDERER_KAFKA_RETRY_SHORTTOTAL=30s
+      - ORDERER_KAFKA_RETRY_LONGINTERVAL=30s
+      - ORDERER_KAFKA_RETRY_LONGTOTAL=30s
       - ORDERER_KAFKA_VERBOSE=true
     volumes:
       - ./orderer/genesis.block:/var/hyperledger/orderer/orderer.genesis.block
